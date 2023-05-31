@@ -1,0 +1,29 @@
+# -- fieldFacet custom view -- #
+<hr/>
+{{!--renderComponent name="fieldFacet" primaryNodeType="jnt:fieldFacet" properties=(obj facet="type" field="jnt:event;eventsType" limit="100" mincount="1" missing="false" offset="0")--}}
+
+<!--[jnt:fieldFacet] > jnt:facet
+- sort (string, choicelist[resourceBundle]) indexed=no < count,index
+- prefix (string) indexed=no
+- limit (long) = 100 indexed=no
+- offset (long) = 0 indexed=no
+- missing (boolean) indexed=no-->
+<div class="facetsList">
+
+    <p> facet: {{jcrGetProperty "facet"}} </p>
+    <p> field: {{jcrGetProperty "field"}} </p>
+    <p> limit: {{jcrGetProperty "limit"}} </p>
+    <p> mincount: {{jcrGetProperty "mincount"}} </p>
+    <p> missing: {{jcrGetProperty "missing"}} </p>
+    <p> offset: {{jcrGetProperty "offset"}} </p>
+
+    <ul>
+        {{#each facet}}
+            <li><a href="{{facetUrl}}" rel="nofollow">{{renderComponent name="facet" primaryNodeType="jnt:facet" view="default"}}</a> ({{facetValue.count}})<br>{{name}}={{value}}</li>
+        {{/each}}
+    </ul>
+
+</div>
+
+
+

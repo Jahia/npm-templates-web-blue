@@ -1,0 +1,10 @@
+{
+  "facets": {
+    "selectFilter": "Wählen Sie einen oder mehrere Filter aus",
+    "activeFacet": "Aktive Facette",
+    "activeFacets": "Aktive Facetten",
+    "facets": "Facetten",
+    "facetsSet": "Facetten-Reihe",
+    "remove": "Entferenen"
+  }
+}

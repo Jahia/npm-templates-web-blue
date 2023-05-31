@@ -1,0 +1,7 @@
+/node_modules
+/.settings
+/.classpath
+/.project
+/.idea/
+/*.iml
+/templates-web-blue*.tgz

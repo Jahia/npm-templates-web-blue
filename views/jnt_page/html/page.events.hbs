@@ -1,0 +1,220 @@
+{{renderInfo varName='renderInfo'}}
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    {{#unlessEq (jcrGetProperty "jcr:description" resource=currentResource) ""}}
+        <meta name="description" content="{{jcrGetProperty "jcr:description" resource=currentResource}}" />
+    {{/unlessEq}}
+    {{#unlessEq (jcrGetProperty "jcr:createdBy" resource=currentResource) ""}}
+        <meta name="author" content="{{jcrGetProperty "jcr:createdBy" resource=currentResource}}" />
+    {{/unlessEq}}
+    {{#unlessEq (jcrGetProperty "j:keywords" resource=currentResource) ""}}
+        <meta name="keywords" content="{{jcrGetProperty "j:keywords" resource=currentResource}}" />
+    {{/unlessEq}}
+    <link rel="stylesheet" type="text/css" href="{{renderInfo.moduleUrl}}/css/print.css" media="print" />
+    <title>{{jcrGetProperty "jcr:title" resource=currentResource}}</title>
+</head>
+
+<body>
+
+{{addResources type="css" resources="960.css,01web.css,02mod.css,navigationN1.css,navigationN2-2.css"}}
+
+{{#if renderInfo.editMode}}
+    {{addResources type="css" resources="edit.css"}}
+{{/if}}
+
+<div class="bodywrapper">
+
+    <div id="header">
+        <div class="container_16">
+            <!--start grid_6-->
+            <div class='grid_6'>
+                {{renderComponent name="link-to-edit-mode" primaryNodeType="jnt:gotoEdit" mixins=(arr "jmix:requiredPermissions") properties=(obj j:requireLoggedUser="false" j:requirePrivilegedUser="false"  j:requiredPermissionNames=(arr "jContentAccess"))}}
+                {{renderComponent name="header-left" primaryNodeType="jnt:absoluteArea"}}
+                <div class='clear'></div>
+            </div>
+            <!--stop grid_6-->
+            <!--start grid_10-->
+            <div class='grid_10'>
+                {{renderComponent name="header-right" primaryNodeType="jnt:absoluteArea"}}
+                <div class='clear'></div>
+            </div>
+            <!--stop grid_10-->
+            <div class='clear'></div>
+        </div>
+    </div>
+
+    <div id="headerBottom">
+        <div class="container_16">
+            <!--start grid_16-->
+            <div class='grid_16'>
+                {{renderComponent name="navMenu" primaryNodeType="jnt:navMenu" properties=(obj j:maxDepth="3" j:startLevel="1" j:styleName="navigationN1" j:baselineNode="home" j:menuItemView="menuElement")}}
+                <div class='clear'></div>
+            </div>
+            <!--stop grid_16-->
+            <div class='clear'></div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container_16">
+            <!--start grid_11-->
+            <div class='grid_11'>
+                {{renderComponent name="pagetitle" primaryNodeType="jnt:pageTitle"}}
+                {{renderComponent name="listA" primaryNodeType="jnt:area"}}
+                {{renderComponent name="events" primaryNodeType="jnt:area" properties=(obj j:allowedTypes=(arr "jnt:event"))}}
+                <div class='clear'></div>
+            </div>
+            <!--stop grid_11-->
+            <!--start grid_5-->
+            <div class='grid_5'>
+                {{renderComponent name="navMenu2" primaryNodeType="jnt:navMenu" properties=(obj j:baselineNode="home" j:maxDepth="3" j:menuItemView="menuElement" j:startLevel="1" j:styleName="navigationN2")}}
+                {{renderComponent name="calendar" primaryNodeType="jnt:calendar" properties=(obj startDateProperty="startDate" endDateProperty="endDate")}}
+
+                {{!-- renderComponent name="facets" primaryNodeType="jnt:facets" view="default" properties=(obj facetsLabel="Select one or more filters") --}}
+                {{!-- renderComponent name="facets" primaryNodeType="jnt:facets" view="default" properties=(obj j:type="jnt:event") --}}
+
+<!--                <facets j:bindedComponent="/modules/templates-web-blue/templates/base/events/row1-col1/events"
+                        j:type="jnt:event"
+                        jcr:primaryType="jnt:facets">
+                    <fieldFacet facet="type"
+                                field="jnt:event;eventsType"
+                                jcr:primaryType="jnt:fieldFacet"
+                                limit="100"
+                                mincount="1"
+                                missing="false"
+                                offset="0">
+                        <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" label="Type"/>
+                    </fieldFacet>
+                    <field-hierarchical-facet facet="Categories"
+                                              field="jmix:categorized;j:defaultCategory"
+                                              jcr:primaryType="jnt:fieldHierarchicalFacet"
+                                              limit="100"
+                                              mincount="1"
+                                              missing="false"
+                                              offset="0"
+                                              prefix="/sites/systemsite/categories">
+                        <j:translation_en jcr:language="en"
+                                          jcr:primaryType="jnt:translation"
+                                          label="Categories"/>
+                        <j:translation_fr jcr:language="fr"
+                                          jcr:primaryType="jnt:translation"
+                                          label="Catégories"/>
+                    </field-hierarchical-facet>
+                    <queryFacet facet="nextEvents"
+                                jcr:primaryType="jnt:queryFacet"
+                                mincount="1"
+                                query="0\:FACET\:startDate:[NOW/DAY TO NOW/MONTH+1MONTH] OR 0\:FACET\:endDate:[NOW/DAY TO NOW/MONTH+1MONTH]">
+                        <j:translation_en jcr:language="en"
+                                          jcr:primaryType="jnt:translation"
+                                          label="Next events per month"
+                                          valueLabel="##DynamicDateLabel(NOW/MONTH,date,MMMM)##"/>
+                        <j:translation_fr jcr:language="fr"
+                                          jcr:primaryType="jnt:translation"
+                                          label="Prochains évènements par mois"
+                                          valueLabel="##DynamicDateLabel(NOW/MONTH,date,MMMM)##"/>
+                    </queryFacet>
+                    <queryFacet-1 facet="nextEvents"
+                                  jcr:primaryType="jnt:queryFacet"
+                                  mincount="1"
+                                  query="0\:FACET\:startDate:[NOW/MONTH+1MONTH TO NOW/MONTH+2MONTH] OR 0\:FACET\:endDate:[NOW/MONTH+1MONTH TO NOW/MONTH+2MONTH]">
+                        <j:translation_en jcr:language="en"
+                                          jcr:primaryType="jnt:translation"
+                                          label="Next events per month"
+                                          valueLabel="##DynamicDateLabel(NOW/MONTH+1MONTH,date,MMMM)##"/>
+                        <j:translation_fr jcr:language="fr"
+                                          jcr:primaryType="jnt:translation"
+                                          label="Prochains évènements par mois"
+                                          valueLabel="##DynamicDateLabel(NOW/MONTH+1MONTH,date,MMMM)##"/>
+                    </queryFacet-1>
+                    <queryFacet-2 facet="nextEvents"
+                                  jcr:primaryType="jnt:queryFacet"
+                                  mincount="1"
+                                  query="0\:FACET\:startDate:[NOW/MONTH+2MONTH TO NOW/MONTH+3MONTH] OR 0\:FACET\:endDate:[NOW/MONTH+2MONTH TO NOW/MONTH+3MONTH]">
+                        <j:translation_en jcr:language="en"
+                                          jcr:primaryType="jnt:translation"
+                                          label="Next events per month"
+                                          valueLabel="##DynamicDateLabel(NOW/MONTH+2MONTH,date,MMMM)##"/>
+                        <j:translation_fr jcr:language="fr"
+                                          jcr:primaryType="jnt:translation"
+                                          label="Prochains évènements par mois"
+                                          valueLabel="##DynamicDateLabel(NOW/MONTH+2MONTH,date,MMMM)##"/>
+                    </queryFacet-2>
+                    <queryFacet-3 facet="nextEvents"
+                                  jcr:primaryType="jnt:queryFacet"
+                                  mincount="1"
+                                  query="0\:FACET\:startDate:[NOW/MONTH+3MONTH TO NOW/MONTH+4MONTH] OR 0\:FACET\:endDate:[NOW/MONTH+3MONTH TO NOW/MONTH+4MONTH]">
+                        <j:translation_en jcr:language="en"
+                                          jcr:primaryType="jnt:translation"
+                                          label="Next events per month"
+                                          valueLabel="##DynamicDateLabel(NOW/MONTH+3MONTH,date,MMMM)##"/>
+                        <j:translation_fr jcr:language="fr"
+                                          jcr:primaryType="jnt:translation"
+                                          label="Prochains évènements par mois"
+                                          valueLabel="##DynamicDateLabel(NOW/MONTH+3MONTH,date,MMMM)##"/>
+                    </queryFacet-3>
+                </facets>-->
+
+                <div class='clear'></div>
+            </div>
+            <!--stop grid_5-->
+            <div class='clear'></div>
+        </div>
+    </div>
+
+
+    <div id="footerTop">
+        <div class="container_16">
+            <div class=" noprint">
+                <!--start grid_4-->
+                <div class='grid_4'>
+                    {{renderComponent name="topFooter1" primaryNodeType="jnt:absoluteArea"}}
+                    <div class='clear'></div>
+                </div>
+                <!--stop grid_4-->
+                <!--start grid_4-->
+                <div class='grid_4'>
+                    {{renderComponent name="topFooter2" primaryNodeType="jnt:absoluteArea"}}
+                    <div class='clear'></div>
+                </div>
+                <!--stop grid_4-->
+                <!--start grid_4-->
+                <div class='grid_4'>
+                    {{renderComponent name="topFooter3" primaryNodeType="jnt:absoluteArea"}}
+                    <div class='clear'></div>
+                </div>
+                <!--stop grid_4-->
+                <!--start grid_4-->
+                <div class='grid_4'>
+                    {{renderComponent name="topFooter4" primaryNodeType="jnt:absoluteArea"}}
+                    <div class='clear'></div>
+                </div>
+                <!--stop grid_4-->
+                <div class='clear'></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container_16">
+            <!--start grid_8-->
+            <div class='grid_8'>
+                {{renderComponent name="footer-left" primaryNodeType="jnt:absoluteArea"}}
+                <div class='clear'></div>
+            </div>
+            <!--stop grid_8-->
+            <!--start grid_8-->
+            <div class='grid_8'>
+                {{renderComponent name="footer-right" primaryNodeType="jnt:absoluteArea"}}
+                <div class='clear'></div>
+            </div>
+            <!--stop grid_8-->
+            <div class='clear'></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

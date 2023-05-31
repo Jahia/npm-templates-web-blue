@@ -1,0 +1,10 @@
+{
+  "facets": {
+    "selectFilter": "Sélectionnez des filtres",
+    "activeFacet": "Filtre actif",
+    "activeFacets": "Filtres sélectionnés",
+    "facets": "Filtres par facettes",
+    "facetsSet": "Set de facets",
+    "remove": "Retirer"
+  }
+}
