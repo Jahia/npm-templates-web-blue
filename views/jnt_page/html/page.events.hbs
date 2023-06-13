@@ -70,7 +70,7 @@
             <!--start grid_5-->
             <div class='grid_5'>
                 {{renderComponent name="navMenu2" primaryNodeType="jnt:navMenu" properties=(obj j:baselineNode="home" j:maxDepth="3" j:menuItemView="menuElement" j:startLevel="1" j:styleName="navigationN2")}}
-                {{renderComponent name="calendar" primaryNodeType="jnt:calendar" properties=(obj startDateProperty="startDate" endDateProperty="endDate")}}
+                {{renderComponent name="calendar" primaryNodeType="jnt:calendar" boundComponentRelativePath="/events" properties=(obj startDateProperty="startDate" endDateProperty="endDate")}}
 
                 {{!-- renderComponent name="facets" primaryNodeType="jnt:facets" view="default" properties=(obj facetsLabel="Select one or more filters") --}}
                 {{!-- renderComponent name="facets" primaryNodeType="jnt:facets" view="default" properties=(obj j:type="jnt:event") --}}

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider; webpack --mode=development",
+    "build": "webpack --mode=development",
     "pwd": "dotenv -- echo $HOST",
     "doDeploy": "curl -s --user ${JAHIA_USER} --form bundle=@./templates-web-blue-v1.0.0.tgz --form start=true ${JAHIA_HOST}/modules/api/bundles",
     "deploy": "dotenv yarn doDeploy",
