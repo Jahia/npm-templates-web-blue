@@ -1,4 +1,5 @@
 {{renderInfo varName='renderInfo'}}
+{{loadJSON 'page.components.json' 'components'}}
 <html>
 
     <head>
@@ -34,8 +35,7 @@
                         {{renderComponent name="header-left" primaryNodeType="jnt:absoluteArea"}}
                         <div class='clear'></div>
                     </div>
-                    <!--stop grid_6-->
-                    <!--start grid_10-->
+
                     <div class='grid_10'>
                         {{renderComponent name="header-right" primaryNodeType="jnt:absoluteArea"}}
                         <div class='clear'></div>
@@ -46,27 +46,9 @@
             </div>
 
             <div id="headerBottom">
-                <div class="container_16">
-                <!--start grid_16-->
-                <div class='grid_16'>
-                    {{renderComponent name="navMenu" primaryNodeType="jnt:navMenu" properties=(obj j:maxDepth="3" j:startLevel="1" j:styleName="navigationN1" j:baselineNode="home" j:menuItemView="menuElement")}}
-                    <div class='clear'></div>
-                </div>
-                <!--stop grid_16-->
-                <div class='clear'></div>
-            </div>
-            </div>
 
-
-            <div id="illustration">
-                <div class="container_16">
-                    <!--start grid_16-->
-                    <div class='grid_16'>
-                         {{renderComponent name="illustration" primaryNodeType="jnt:area" properties=(obj j:areaView="easySlider-content" j:allowedTypes=(arr "jnt:banner"))}}
-                    </div>
-                    <!--stop grid_16-->
-                    <div class='clear'></div>
-                </div>
+             <div >
+                {{renderComponent name="navMenu" primaryNodeType=components.navMenu.nodeType properties=components.navMenu.properties}}</div>
             </div>
 
             <div id="content">
@@ -74,7 +56,7 @@
                     <!--start grid_10-->
                     <div class='grid_10'>
                         {{renderComponent name="mainContent" primaryNodeType="jnt:area"}}
-                        <div class='clear'></div>
+                              <div class='clear'></div>
                     </div>
                     <!--stop grid_10-->
                     <!--start grid_6-->

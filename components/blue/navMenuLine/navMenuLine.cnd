@@ -1,0 +1,13 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<blue = 'http://www.acme.org/blue/nt/1.0'>
+<blueMix = 'http://www.acme.org/blue/mix/1.0'>
+
+
+[blue:navMenuLine] > jnt:content, mix:title, jmix:navMenuComponent, blueMix:blueComponentLine orderable
+ - j:baselineNode (string,choicelist) nofulltext < 'home', 'currentPage'
+ - j:maxDepth (long) = 2 mandatory
+ - j:startLevel (long) = 0
+ - j:menuItemView (string,choicelist[templates='jmix:navMenuItem,menuItem',resourceBundle,image]) = menuElement nofulltext
+
+ [blueMix:blueComponentLine] > jmix:droppableContent, jmix:accessControllableContent mixin

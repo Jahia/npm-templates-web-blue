@@ -1,0 +1,42 @@
+
+<head>
+<style>
+body {background-color: powderblue;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color:red;
+}
+li {
+  display: inline;
+}
+</style>
+</head>
+-----------
+{{#*inline "menuEntry"}}
+<li class="{{menuEntryCss this @first @last}}">
+  {{{this.render}}}
+  {{#if this.children}}
+  <div class="navBar">
+  <ul class="inner-box level_{{level}}">
+    {{#each this.children}}
+      {{> menuEntry}}
+    {{/each}}
+  </ul>
+  </div>
+  {{/if}}
+</li>
+{{/inline}}
+
+{{jcrGetProperty 'j:baselineNode' varName='baseNode'}}
+{{jcrGetProperty 'j:maxDepth' varName='maxDepth'}}
+{{jcrGetProperty 'j:startLevel' varName='startLevel'}}
+{{jcrGetProperty 'j:menuItemView' varName='menuItemView'}}
+<div class="navBar">
+  <ul class="navmenu level_0">
+  {{#each (buildNavMenu baseNode=baseNode maxDepth=maxDepth startLevel=startLevel menuEntryComponent=menuItemView)}}
+    {{> menuEntry}}
+  {{/each}}
+  </ul>
+</div>

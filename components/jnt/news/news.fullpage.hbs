@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Template</title>
+
+</head>
+
+{{addResources type="css" resources="960.css,01web.css,02mod.css,navigationN1.css,navigationN2-2.css"}}
+
+<body>
+{{jcrGetProperty "image" varName="imageUrl"}}
+
+    <header>
+        {{renderComponent name="header" primaryNodeType="jnt:area"}}
+    </header>
+
+    <main>
+            NEWS fullpage
+
+             <p >Nodename : {{jcrGetProperty "j:nodename"}}</p>
+             <p >uuid news: {{jcrGetProperty "jcr:uuid"}}</p>
+             <p >title: {{jcrGetProperty "jcr:title"}}</p>
+             <p >desc: {{jcrGetProperty "desc"}}</p>
+----------- image :
+            <img src="{{imageUrl}}" >
+----------
+<a href="/sites/mySite/home/news.html"> back to news page </a>
+
+
+</p>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+        {{renderComponent name="rating" primaryNodeType="jnt:rateable" boundComponentRelativePath="/"}}
+         <p >comments : </p>
+        {{renderComponent name="topic" primaryNodeType="jnt:topic" boundComponentRelativePath="/"}}
+        {{renderComponent name="addComment" primaryNodeType="jnt:addComment" boundComponentRelativePath="/"}}
+        {{renderComponent name="commentsList" primaryNodeType="jnt:commentsList" boundComponentRelativePath="/"}}
+
+    </main>
+
+    <footer>
+        {{renderComponent name="footer" primaryNodeType="jnt:area"}}
+    </footer>
+</body>
+
+</html>

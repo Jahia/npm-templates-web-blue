@@ -1,4 +1,5 @@
 {{renderInfo varName='renderInfo'}}
+{{loadJSON 'page.components.json' 'components'}}
 <html>
 
 <head>
@@ -17,6 +18,7 @@
 </head>
 
 <body>
+
 
 {{addResources type="css" resources="960.css,01web.css,02mod.css,navigationN1.css,navigationN2-2.css"}}
 
@@ -49,7 +51,6 @@
         <div class="container_16">
             <!--start grid_16-->
             <div class='grid_16'>
-                {{renderComponent name="navMenu" primaryNodeType="jnt:navMenu" properties=(obj j:maxDepth="3" j:startLevel="1" j:styleName="navigationN1" j:baselineNode="home" j:menuItemView="menuElement")}}
                 <div class='clear'></div>
             </div>
             <!--stop grid_16-->
@@ -67,11 +68,15 @@
             </div>
             <!--stop grid_10-->
             <!--start grid_6-->
+
+
             <div class='grid_6'>
-                {{renderComponent name="navMenu2" primaryNodeType="jnt:navMenu" properties=(obj j:baselineNode="home" j:maxDepth="3" j:menuItemView="menuElement" j:startLevel="1" j:styleName="navigationN2-2")}}
+                {{renderComponent name="navMenu2" primaryNodeType="jnt:navMenu" properties=(obj j:baselineNode="home" j:maxDepth="3" j:menuItemView="menuElement" j:startLevel="0" )}}
+
                 {{renderComponent name="right-column" primaryNodeType="jnt:area"}}
                 <div class='clear'></div>
             </div>
+
             <!--stop grid_6-->
             <div class='clear'></div>
         </div>

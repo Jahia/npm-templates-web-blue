@@ -1,4 +1,5 @@
 {{renderInfo varName='renderInfo'}}
+{{loadJSON 'page.components.json' 'components'}}
 <html>
 
 <head>
@@ -51,9 +52,7 @@
         <div class="container_16">
             <!--start grid_16-->
             <div class='grid_16'>
-                {{renderComponent name="navMenu" primaryNodeType="jnt:navMenu"
-                                  properties=(obj j:maxDepth="3" j:startLevel="1" j:styleName="navigationN1" j:baselineNode="home" j:menuItemView="menuElement")}}
-                <div class='clear'></div>
+                 <div class='clear'></div>
             </div>
             <!--stop grid_16-->
             <div class='clear'></div>
@@ -64,18 +63,15 @@
         <div class="container_16">
             <!--start grid_10-->
             <div class='grid_10'>
-                {{renderComponent name="pagetitle" primaryNodeType="jnt:pageTitle"}}
                 {{renderComponent name="mainContent" primaryNodeType="jnt:area"
                                   properties=(obj j:allowedTypes=(arr "jnt:news"))}}
+
                 <div class='clear'></div>
             </div>
             <!--stop grid_10-->
             <!--start grid_6-->
             <div class='grid_6'>
-                {{renderComponent name="navMenu2" primaryNodeType="jnt:navMenu"
-                                  properties=(obj j:baselineNode="home" j:maxDepth="3" j:menuItemView="menuElement" j:startLevel="1" j:styleName="navigationN2-2")}}
-                {{renderComponent name="right-column" primaryNodeType="jnt:area"}}
-                {{renderComponent name="rating" primaryNodeType="jnt:rateable" boundComponentRelativePath="/"}}
+                    {{renderComponent name="right-column" primaryNodeType="jnt:area"}}
                 <div class='clear'></div>
             </div>
             <!--stop grid_6-->
@@ -135,7 +131,9 @@
     </div>
 
 </div>
-
+  <div class="nav">
+                {{renderComponent name="navMenu" primaryNodeType=components.navMenu.nodeType properties=components.navMenu.properties}}</div>
+   </div>
 </body>
 </html>
 
