@@ -1,0 +1,120 @@
+{
+  "events": {
+    "breadCrumb": {
+      "displayCurrentPage": "true",
+      "displayHome": "true",
+      "displayLinkOnCurrentPage": "false"
+    },
+    "facets": {
+      "j:type": "jnt:event",
+      "fieldFacet": {
+        "facet": "type",
+        "field": "jnt:event;eventsType",
+        "jcr:primaryType": "jnt:fieldFacet",
+        "limit": "100",
+        "mincount": "1",
+        "missing": "false",
+        "offset": "0",
+        "i18n": [
+          {
+            "language": "en",
+            "label": "Type"
+          }
+        ]
+      },
+      "field-hierarchical-facet": {
+        "facet": "Categories",
+        "field": "jmix:categorized;j:defaultCategory",
+        "jcr:primaryType": "jnt:fieldHierarchicalFacet",
+        "limit": "100",
+        "mincount": "1",
+        "missing": "false",
+        "offset": "0",
+        "prefix": "/sites/systemsite/categories",
+        "i18n": [
+          {
+            "language": "en",
+            "label": "Categories"
+          },
+          {
+            "language": "fr",
+            "label": "Catégories"
+          }
+        ]
+      },
+      "queryFacet": {
+
+        "facet": "nextEvents",
+        "jcr:primaryType": "jnt:queryFacet",
+        "mincount": "1",
+        "query": "0\\:FACET\\:startDate:[NOW/DAY TO NOW/MONTH+1MONTH] OR 0:FACET\\:endDate\\:[NOW/DAY TO NOW/MONTH+1MONTH]",
+        "i18n": [
+          {
+            "language": "en",
+            "label": "Next events per month",
+            "valueLabel": "##DynamicDateLabel(NOW/MONTH,date,MMMM)##"
+          },
+          {
+            "language": "fr",
+            "label": "Prochains évènements par mois",
+            "valueLabel": "##DynamicDateLabel(NOW/MONTH,date,MMMM)##"
+          }
+        ]
+      },
+      "queryFacet1": {
+        "facet": "nextEvents",
+        "jcr:primaryType": "jnt:queryFacet",
+        "mincount": "1",
+        "query": "0\\:FACET\\:startDate:[NOW/MONTH+1MONTH TO NOW/MONTH+2MONTH] OR 0\\:FACET\\:endDate:[NOW/MONTH+1MONTH TO NOW/MONTH+2MONTH]",
+        "i18n": [
+          {
+            "language": "en",
+            "label": "Next events per month",
+            "valueLabel": "##DynamicDateLabel(NOW/MONTH+1MONTH,date,MMMM)##"
+          },
+          {
+            "language": "fr",
+            "label": "Prochains évènements par mois",
+            "valueLabel": "##DynamicDateLabel(NOW/MONTH+1MONTH,date,MMMM)##"
+          }
+        ]
+      },
+      "queryFacet2": {
+        "facet": "nextEvents",
+        "jcr:primaryType": "jnt:queryFacet",
+        "mincount": "1",
+        "query": "0\\:FACET\\:startDate:[NOW/MONTH+2MONTH TO NOW/MONTH+3MONTH] OR 0\\:FACET\\:endDate:[NOW/MONTH+2MONTH TO NOW/MONTH+3MONTH]",
+        "i18n": [
+          {
+            "language": "en",
+            "label": "Next events per month",
+            "valueLabel": "##DynamicDateLabel(NOW/MONTH+2MONTH,date,MMMM)##"
+          },
+          {
+            "language": "fr",
+            "label": "Prochains évènements par mois",
+            "valueLabel": "##DynamicDateLabel(NOW/MONTH+2MONTH,date,MMMM)##"
+          }
+        ]
+      },
+      "queryFacet3": {
+        "facet": "nextEvents",
+        "jcr:primaryType": "jnt:queryFacet",
+        "mincount": "1",
+        "query": "0\\:FACET\\:startDate:[NOW/MONTH+3MONTH TO NOW/MONTH+4MONTH] OR 0\\:FACET\\:endDate:[NOW/MONTH+3MONTH TO NOW/MONTH+4MONTH]",
+        "i18n": [
+          {
+            "language": "en",
+            "label": "Next events per month",
+            "valueLabel": "##DynamicDateLabel(NOW/MONTH+3MONTH,date,MMMM)##"
+          },
+          {
+            "language": "fr",
+            "label": "Prochains évènements par mois",
+            "valueLabel": "##DynamicDateLabel(NOW/MONTH+3MONTH,date,MMMM)##"
+          }
+        ]
+      }
+    }
+  }
+}
