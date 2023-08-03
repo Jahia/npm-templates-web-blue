@@ -50,12 +50,12 @@
                     <div class='clear'></div>
                 </div>
             </div>
-            {{loadJSON 'test.events.json' 'components'}}
+            {{loadJSON 'page.events.contents.json' 'eventsContents'}}
             <div id="content">
                 <div class="container_16">
                     <div class='grid_11'>
                         {{renderComponent name="pagetitle" primaryNodeType="jnt:pageTitle"}}
-                        {{renderComponent primaryNodeType="jnt:pageBreadcrumb" properties=components.events.breadCrumb}}
+                        {{renderComponent content=eventsContents.breadCrumb}}
                         {{renderComponent name="listA" primaryNodeType="jnt:area"}}
                         {{renderComponent name="events" primaryNodeType="jnt:area"
                                           properties=(obj j:allowedTypes=(arr "jnt:event"))}}
@@ -67,9 +67,7 @@
                         {{renderComponent name="calendar" primaryNodeType="jnt:calendar" boundComponentRelativePath="/events"
                                           properties=(obj startDateProperty="startDate" endDateProperty="endDate")}}
 
-                        {{renderComponent name="facets" primaryNodeType="jnt:facets" boundComponentRelativePath="/events"
-                                          view="default" properties=components.events.facets }}
-
+                        {{renderComponent content=eventsContents.facets boundComponentRelativePath="/events" view="default" }}
                         <div class='clear'></div>
                     </div>
                     <div class='clear'></div>
