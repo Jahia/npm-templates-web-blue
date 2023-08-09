@@ -1,0 +1,10 @@
+.env
+/node_modules
+/.settings
+/.classpath
+/.project
+/.idea/
+/*.iml
+*.tgz
+/.yarn
+/dist
