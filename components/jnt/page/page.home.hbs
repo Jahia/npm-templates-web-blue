@@ -71,40 +71,41 @@
                     <div class='clear'></div>
                 </div>
             </div>
+            {{render view="footer" advanceRenderingConfig="INCLUDE"}}
 
+<!--            <div id="footerTop">-->
+<!--                <div class="container_16">-->
+<!--                    <div class=" noprint">-->
+<!--                        {{!#repeat count=4}}-->
+<!--                            <div class='grid_4'>-->
+<!--                                {{!append @index "topFooter"}}-->
+<!--                                {{!render content=page.footerTop}}-->
+<!--                                {{!> area content=page.area.footerTop}}-->
+<!--                                <div class='clear'></div>-->
+<!--                            </div>-->
+<!--                        {{!/repeat}}-->
+<!--                        <div class='clear'></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
-            <div id="footerTop">
-                <div class="container_16">
-                    <div class=" noprint">
-                        {{!#repeat count=4}}
-                            <div class='grid_4'>
-                                {{!append @index "topFooter"}}
-                                {{render content=page.footerTop}}
-                                <div class='clear'></div>
-                            </div>
-                        {{!/repeat}}
-                        <div class='clear'></div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="footer">
-                <div class="container_16">
-                    <!--start grid_8-->
-                    <div class='grid_8'>
-                        {{!renderComponent name="footer-left" primaryNodeType="jnt:absoluteArea"}}
-                        <div class='clear'></div>
-                    </div>
-                    <!--stop grid_8-->
-                    <!--start grid_8-->
-                    <div class='grid_8'>
-                        {{!renderComponent name="footer-right" primaryNodeType="jnt:absoluteArea"}}
-                        <div class='clear'></div>
-                    </div>
-                    <!--stop grid_8-->
-                    <div class='clear'></div>
-                </div>
-            </div>
+<!--            <div id="footer">-->
+<!--                <div class="container_16">-->
+<!--                    &lt;!&ndash;start grid_8&ndash;&gt;-->
+<!--                    <div class='grid_8'>-->
+<!--                        {{!renderComponent name="footer-left" primaryNodeType="jnt:absoluteArea"}}-->
+<!--                        <div class='clear'></div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;stop grid_8&ndash;&gt;-->
+<!--                    &lt;!&ndash;start grid_8&ndash;&gt;-->
+<!--                    <div class='grid_8'>-->
+<!--                        {{!renderComponent name="footer-right" primaryNodeType="jnt:absoluteArea"}}-->
+<!--                        <div class='clear'></div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;stop grid_8&ndash;&gt;-->
+<!--                    <div class='clear'></div>-->
+<!--                </div>-->
+<!--            </div>-->
 
         </div>
 
