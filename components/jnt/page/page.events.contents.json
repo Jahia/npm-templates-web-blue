@@ -1,4 +1,23 @@
 {
+  "area": {
+    "listA": {"name":"listA", "nodeType":"jnt:area"},
+    "events": {
+      "name": "events",
+      "nodeType":"jnt:area",
+      "properties": {
+        "j:allowedTypes": ["jnt:event"]
+      }
+    }
+  },
+  "calendar": {
+    "name":"calendar",
+    "nodeType":"jnt:calendar",
+    "boundComponentRelativePath":"/events",
+    "properties":{
+      "startDateProperty":"startDate",
+      "endDateProperty":"endDate"
+    }
+  },
   "breadCrumb": {
     "name": "breadCrumb",
     "nodeType": "jnt:pageBreadcrumb",

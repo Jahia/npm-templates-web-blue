@@ -1,0 +1,30 @@
+{{loadJSON 'page.partialHeader.contents.json' 'template'}}
+<div id="header">
+    <div class="container_16">
+        <!--start grid_6-->
+        <div class='grid_6'>
+            {{render content=template.link.link2EditMode}}
+            {{render content=template.area.headerLeft}}
+            <div class='clear'></div>
+        </div>
+        <!--stop grid_6-->
+        <!--start grid_10-->
+        <div class='grid_10'>
+            {{render content=template.area.headerRight}}
+            <div class='clear'></div>
+        </div>
+        <!--stop grid_10-->
+        <div class='clear'></div>
+    </div>
+</div>
+<div id="headerBottom">
+    <div class="container_16">
+        <!--start grid_16-->
+        <div class='grid_16'>
+            {{render content=template.nav.menu}}
+            <div class='clear'></div>
+        </div>
+        <!--stop grid_16-->
+        <div class='clear'></div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+{
+  "area": {
+    "footerTop": [
+      {"name": "topFooter1","nodeType": "jnt:absoluteArea"},
+      {"name": "topFooter2","nodeType": "jnt:absoluteArea"},
+      {"name": "topFooter3","nodeType": "jnt:absoluteArea"},
+      {"name": "topFooter4","nodeType": "jnt:absoluteArea"}
+    ],
+    "footer": {
+      "footerLeft": {
+        "name": "footer-left","nodeType": "jnt:absoluteArea"
+      },
+      "footerRight": {
+        "name": "footer-right","nodeType": "jnt:absoluteArea"
+      }
+    }
+  }
+}

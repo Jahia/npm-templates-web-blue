@@ -1,53 +1,17 @@
-{{loadJSON 'page.home.contents.json' 'page'}}
+{{loadJSON 'page.home.contents.json' 'template'}}
 <html>
-
     <head>
-        {{addResources type="css" resources="960.css,01web.css,02mod.css,navigationN1.css,navigationN2-2.css"}}
-        {{!#if ctx.mode}}
-            {{!addResources type="css" resources="edit.css"}}
-        {{!/if}}
+        {{render view="partialHeadCommon" advanceRenderingConfig="INCLUDE"}}
     </head>
 
     <body>
         <div class="bodywrapper">
-
-            <div id="header">
-                <div class="container_16">
-                    <!--start grid_6-->
-                    <div class='grid_6'>
-                        {{!renderComponent name="link-to-edit-mode" primaryNodeType="jnt:gotoEdit" mixins=(arr "jmix:requiredPermissions") properties=(obj j:requireLoggedUser="false" j:requirePrivilegedUser="false"  j:requiredPermissionNames=(arr "jContentAccess"))}}
-                        {{!renderComponent name="header-left" primaryNodeType="jnt:absoluteArea"}}
-                        <div class='clear'></div>
-                    </div>
-                    <!--stop grid_6-->
-                    <!--start grid_10-->
-                    <div class='grid_10'>
-                        {{!renderComponent name="header-right" primaryNodeType="jnt:absoluteArea"}}
-                        <div class='clear'></div>
-                    </div>
-                    <!--stop grid_10-->
-                    <div class='clear'></div>
-                </div>
-            </div>
-
-            <div id="headerBottom">
-                <div class="container_16">
-                <!--start grid_16-->
-                <div class='grid_16'>
-                    {{!renderComponent name="navMenu" primaryNodeType="jnt:navMenu" properties=(obj j:maxDepth="3" j:startLevel="1" j:styleName="navigationN1" j:baselineNode="home" j:menuItemView="menuElement")}}
-                    <div class='clear'></div>
-                </div>
-                <!--stop grid_16-->
-                <div class='clear'></div>
-            </div>
-            </div>
-
-
+            {{render view="partialHeader" advanceRenderingConfig="INCLUDE"}}
             <div id="illustration">
                 <div class="container_16">
                     <!--start grid_16-->
                     <div class='grid_16'>
-                         {{!renderComponent name="illustration" primaryNodeType="jnt:area" properties=(obj j:areaView="easySlider-content" j:allowedTypes=(arr "jnt:banner"))}}
+                        {{render content=template.area.illustration}}
                     </div>
                     <!--stop grid_16-->
                     <div class='clear'></div>
@@ -58,57 +22,21 @@
                 <div class="container_16">
                     <!--start grid_10-->
                     <div class='grid_10'>
-                        {{!renderComponent name="mainContent" primaryNodeType="jnt:area"}}
+                        {{render content=template.area.mainContent}}
                         <div class='clear'></div>
                     </div>
                     <!--stop grid_10-->
                     <!--start grid_6-->
                     <div class='grid_6'>
-                        {{!renderComponent name="aside" primaryNodeType="jnt:area"}}
+                        {{render content=template.area.aside}}
                         <div class='clear'></div>
                     </div>
                     <!--stop grid_6-->
                     <div class='clear'></div>
                 </div>
             </div>
-            {{render view="footer" advanceRenderingConfig="INCLUDE"}}
-
-<!--            <div id="footerTop">-->
-<!--                <div class="container_16">-->
-<!--                    <div class=" noprint">-->
-<!--                        {{!#repeat count=4}}-->
-<!--                            <div class='grid_4'>-->
-<!--                                {{!append @index "topFooter"}}-->
-<!--                                {{!render content=page.footerTop}}-->
-<!--                                {{!> area content=page.area.footerTop}}-->
-<!--                                <div class='clear'></div>-->
-<!--                            </div>-->
-<!--                        {{!/repeat}}-->
-<!--                        <div class='clear'></div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div id="footer">-->
-<!--                <div class="container_16">-->
-<!--                    &lt;!&ndash;start grid_8&ndash;&gt;-->
-<!--                    <div class='grid_8'>-->
-<!--                        {{!renderComponent name="footer-left" primaryNodeType="jnt:absoluteArea"}}-->
-<!--                        <div class='clear'></div>-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash;stop grid_8&ndash;&gt;-->
-<!--                    &lt;!&ndash;start grid_8&ndash;&gt;-->
-<!--                    <div class='grid_8'>-->
-<!--                        {{!renderComponent name="footer-right" primaryNodeType="jnt:absoluteArea"}}-->
-<!--                        <div class='clear'></div>-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash;stop grid_8&ndash;&gt;-->
-<!--                    <div class='clear'></div>-->
-<!--                </div>-->
-<!--            </div>-->
-
+            {{render view="partialFooter" advanceRenderingConfig="INCLUDE"}}
         </div>
-
     </body>
 </html>
 

@@ -1,0 +1,15 @@
+{
+  "area": {
+    "mainContent": {
+      "name": "mainContent",
+      "nodeType": "jnt:area",
+      "properties": {
+        "j:allowedTypes":["jnt:news"]
+      }
+    },
+    "rightColumn": {
+      "name": "right-column",
+      "nodeType": "jnt:area"
+    }
+  }
+}

@@ -1,8 +1,14 @@
 {
   "area": {
-    "footerTop": {
-      "name": "footerTop",
-      "nodeType": "jnt:absoluteArea"
-    }
+    "illustration": {
+      "name": "illustration",
+      "nodeType": "jnt:area",
+      "properties":{
+        "j:areaView": "easySlider-content",
+        "j:allowedTypes": ["jnt:banner"]
+      }
+    },
+    "mainContent": {"name":"mainContent","nodeType":"jnt:area"},
+    "aside": {"name":"aside","nodeType":"jnt:area"}
   }
 }

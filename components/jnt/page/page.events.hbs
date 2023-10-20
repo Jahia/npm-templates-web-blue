@@ -1,116 +1,31 @@
-{{renderInfo varName='renderInfo'}}
+{{loadJSON 'page.events.contents.json' 'template'}}
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        {{#unlessEq (jcrGetProperty "jcr:description" resource=currentResource) ""}}
-            <meta name="description" content="{{jcrGetProperty "jcr:description" resource=currentResource}}"/>
-        {{/unlessEq}}
-        {{#unlessEq (jcrGetProperty "jcr:createdBy" resource=currentResource) ""}}
-            <meta name="author" content="{{jcrGetProperty "jcr:createdBy" resource=currentResource}}"/>
-        {{/unlessEq}}
-        {{#unlessEq (jcrGetProperty "j:keywords" resource=currentResource) ""}}
-            <meta name="keywords" content="{{jcrGetProperty "j:keywords" resource=currentResource}}"/>
-        {{/unlessEq}}
-        <link rel="stylesheet" type="text/css" href="{{renderInfo.moduleUrl}}/css/print.css" media="print"/>
-        <title>{{jcrGetProperty "jcr:title" resource=currentResource}}</title>
+        {{render view="partialHeadCommon" advanceRenderingConfig="INCLUDE"}}
     </head>
     <body>
-
-        {{addResources type="css" resources="960.css,01web.css,02mod.css,navigationN1.css,navigationN2-2.css"}}
-
-        {{#if renderInfo.editMode}}
-            {{addResources type="css" resources="edit.css"}}
-        {{/if}}
-
         <div class="bodywrapper">
-            <div id="header">
-                <div class="container_16">
-                    <div class='grid_6'>
-                        {{renderComponent name="link-to-edit-mode" primaryNodeType="jnt:gotoEdit"
-                                          mixins=(arr "jmix:requiredPermissions")
-                                          properties=(obj j:requireLoggedUser="false" j:requirePrivilegedUser="false"  j:requiredPermissionNames=(arr "jContentAccess"))}}
-                        {{renderComponent name="header-left" primaryNodeType="jnt:absoluteArea"}}
-                        <div class='clear'></div>
-                    </div>
-                    <div class='grid_10'>
-                        {{renderComponent name="header-right" primaryNodeType="jnt:absoluteArea"}}
-                        <div class='clear'></div>
-                    </div>
-                    <div class='clear'></div>
-                </div>
-            </div>
-
-            <div id="headerBottom">
-                <div class="container_16">
-                    <div class='grid_16'>
-                        {{renderComponent name="navMenu" primaryNodeType="jnt:navMenu"
-                                          properties=(obj j:maxDepth="3" j:startLevel="1" j:styleName="navigationN1" j:baselineNode="home" j:menuItemView="menuElement")}}
-                        <div class='clear'></div>
-                    </div>
-                    <div class='clear'></div>
-                </div>
-            </div>
-            {{loadJSON 'page.events.contents.json' 'eventsContents'}}
+            {{render view="partialHeader" advanceRenderingConfig="INCLUDE"}}
             <div id="content">
                 <div class="container_16">
                     <div class='grid_11'>
-                        {{renderComponent name="pagetitle" primaryNodeType="jnt:pageTitle"}}
-                        {{renderComponent content=eventsContents.breadCrumb}}
-                        {{renderComponent name="listA" primaryNodeType="jnt:area"}}
-                        {{renderComponent name="events" primaryNodeType="jnt:area"
-                                          properties=(obj j:allowedTypes=(arr "jnt:event"))}}
+                        {{render content=(obj name="pagetitle" nodeType="jnt:pageTitle")}}
+                        {{render content=template.breadCrumb}}
+                        {{render content=template.area.listA}}
+                        {{!render content=(obj name="events" nodeType="jnt:area")
+                                 properties=(obj j:allowedTypes=(arr "jnt:event"))}}
                         <div class='clear'></div>
                     </div>
                     <div class='grid_5'>
-                        {{renderComponent name="navMenu2" primaryNodeType="jnt:navMenu"
-                                          properties=(obj j:baselineNode="home" j:maxDepth="3" j:menuItemView="menuElement" j:startLevel="1" j:styleName="navigationN2")}}
-                        {{renderComponent name="calendar" primaryNodeType="jnt:calendar" boundComponentRelativePath="/events"
-                                          properties=(obj startDateProperty="startDate" endDateProperty="endDate")}}
-
-                        {{renderComponent content=eventsContents.facets boundComponentRelativePath="/events" view="default" }}
+                        {{render view="partialNav2" advanceRenderingConfig="INCLUDE"}}
+                        {{render content=template.calendar}}
+                        {{!render content=template.facets boundComponentRelativePath="/events" view="default" }}
                         <div class='clear'></div>
                     </div>
                     <div class='clear'></div>
                 </div>
             </div>
-
-            <div id="footerTop">
-                <div class="container_16">
-                    <div class=" noprint">
-                        <div class='grid_4'>
-                            {{renderComponent name="topFooter1" primaryNodeType="jnt:absoluteArea"}}
-                            <div class='clear'></div>
-                        </div>
-                        <div class='grid_4'>
-                            {{renderComponent name="topFooter2" primaryNodeType="jnt:absoluteArea"}}
-                            <div class='clear'></div>
-                        </div>
-                        <div class='grid_4'>
-                            {{renderComponent name="topFooter3" primaryNodeType="jnt:absoluteArea"}}
-                            <div class='clear'></div>
-                        </div>
-                        <div class='grid_4'>
-                            {{renderComponent name="topFooter4" primaryNodeType="jnt:absoluteArea"}}
-                            <div class='clear'></div>
-                        </div>
-                        <div class='clear'></div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="footer">
-                <div class="container_16">
-                    <div class='grid_8'>
-                        {{renderComponent name="footer-left" primaryNodeType="jnt:absoluteArea"}}
-                        <div class='clear'></div>
-                    </div>
-                    <div class='grid_8'>
-                        {{renderComponent name="footer-right" primaryNodeType="jnt:absoluteArea"}}
-                        <div class='clear'></div>
-                    </div>
-                    <div class='clear'></div>
-                </div>
-            </div>
+            {{render view="partialFooter" advanceRenderingConfig="INCLUDE"}}
         </div>
     </body>
 </html>
