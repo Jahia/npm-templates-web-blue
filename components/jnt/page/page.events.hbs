@@ -12,14 +12,16 @@
                         {{render content=(obj name="pagetitle" nodeType="jnt:pageTitle")}}
                         {{render content=template.breadCrumb}}
                         {{render content=template.area.listA}}
+                        {{!KO}}
                         {{!render content=(obj name="events" nodeType="jnt:area")
                                  properties=(obj j:allowedTypes=(arr "jnt:event"))}}
+                        {{render content=template.area.events}}
                         <div class='clear'></div>
                     </div>
                     <div class='grid_5'>
                         {{render view="partialNav2" advanceRenderingConfig="INCLUDE"}}
                         {{render content=template.calendar}}
-                        {{!render content=template.facets boundComponentRelativePath="/events" view="default" }}
+                        {{render content=template.facets boundComponentRelativePath="/events" view="default" }}
                         <div class='clear'></div>
                     </div>
                     <div class='clear'></div>
@@ -27,5 +29,6 @@
             </div>
             {{render view="partialFooter" advanceRenderingConfig="INCLUDE"}}
         </div>
+        {{render view="partialBodyCss" advanceRenderingConfig="INCLUDE"}}
     </body>
 </html>

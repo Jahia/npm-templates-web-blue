@@ -1,15 +1,27 @@
 {
   "area": {
     "mainContent": {
-      "name": "mainContent",
+      "name": "maincontent",
       "nodeType": "jnt:area",
       "properties": {
-        "j:allowedTypes":["jnt:news"]
+        "j:allowedTypes": ["jnt:news"]
       }
     },
     "rightColumn": {
-      "name": "right-column",
+      "name": "Right-column",
       "nodeType": "jnt:area"
+    }
+  },
+  "nav": {
+    "menu": {
+      "name": "navMenu",
+      "nodeType": "jnt:navMenu",
+      "properties": {
+        "j:baselineNode":"home",
+        "j:maxDepth":"3",
+        "j:startLevel":"1",
+        "j:styleName":"navigationN2-2"
+      }
     }
   }
 }

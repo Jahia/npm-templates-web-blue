@@ -17,9 +17,10 @@
                     <!--stop grid_10-->
                     <!--start grid_6-->
                     <div class='grid_6'>
-                        {{render view="partialNav2" advanceRenderingConfig="INCLUDE"}}
+                        {{render content=template.nav.menu}}
+                        {{!render view="partialNav2" advanceRenderingConfig="INCLUDE"}}
                         {{render content=template.area.rightColumn}}
-                        {{render content=(obj name="rating" nodeType="jnt:rateable") boundComponentRelativePath="/"}}
+                        {{!render content=(obj name="rating" nodeType="jnt:rateable") boundComponentRelativePath="/"}}
                         <div class='clear'></div>
                     </div>
                     <!--stop grid_6-->
@@ -28,6 +29,7 @@
             </div>
             {{render view="partialFooter" advanceRenderingConfig="INCLUDE"}}
         </div>
+        {{render view="partialBodyCss" advanceRenderingConfig="INCLUDE"}}
     </body>
 </html>
 

@@ -1,14 +1,13 @@
 {
   "nav": {
     "menu": {
-      "name": "navMenu2",
+      "name": "side-menu",
       "nodeType": "jnt:navMenu",
       "properties": {
         "j:maxDepth":"3",
         "j:startLevel":"1",
-        "j:styleName":"navigationN2-2",
-        "j:baselineNode":"home",
-        "j:menuItemView":"menuElement"
+        "j:styleName":"navigationN2",
+        "j:baselineNode":"home"
       }
     }
   }
