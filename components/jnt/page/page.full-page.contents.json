@@ -18,28 +18,6 @@
           "displayLinkOnCurrentPage": "false",
           "displayOnFirstLevel": "false"
         }
-      },
-      "content": {
-        "name": "maincontent",
-        "nodeType": "jnt:area",
-        "properties": {
-          "j:allowedTypes": [
-            "jnt:news"
-          ]
-        }
-      }
-    },
-    "aside": {
-      "sideMenu": {
-        "name": "navMenu",
-        "nodeType": "jnt:navMenu",
-        "properties": {
-          "j:baselineNode": "home",
-          "j:maxDepth": "3",
-          "j:startLevel": "1",
-          "j:menuItemView":"menuElement",
-          "j:styleName": "navigationN2-2"
-        }
       }
     }
   }

@@ -9,11 +9,11 @@
         "name": "navMenu",
         "nodeType": "jnt:navMenu",
         "properties":{
-          "j:maxDepth":"3",
-          "j:startLevel":"1",
-          "j:styleName":"navigationN1",
           "j:baselineNode":"home",
-          "j:menuItemView":"menuElement"
+          "j:maxDepth":"1",
+          "j:startLevel":"0",
+          "j:menuItemView":"menuElement",
+          "j:styleName":"navigationN1"
         }
       }
     },

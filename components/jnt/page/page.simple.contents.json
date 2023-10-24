@@ -18,15 +18,6 @@
           "displayLinkOnCurrentPage": "false",
           "displayOnFirstLevel": "false"
         }
-      },
-      "content": {
-        "name": "maincontent",
-        "nodeType": "jnt:area",
-        "properties": {
-          "j:allowedTypes": [
-            "jnt:news"
-          ]
-        }
       }
     },
     "aside": {

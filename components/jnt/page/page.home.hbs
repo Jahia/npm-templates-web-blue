@@ -1,43 +1,33 @@
 {{loadJSON 'page.home.contents.json' 'template'}}
 <html>
     <head>
-        {{render view="partialHeadCommon" advanceRenderingConfig="INCLUDE"}}
+        {{render view="partial_head_common" advanceRenderingConfig="INCLUDE"}}
     </head>
 
     <body>
         <div class="bodywrapper">
-            {{render view="partialHeader" advanceRenderingConfig="INCLUDE"}}
-            <div id="illustration">
-                <div class="container_16">
-                    <!--start grid_16-->
-                    <div class='grid_16'>
-                        {{render content=template.area.illustration}}
-                    </div>
-                    <!--stop grid_16-->
-                    <div class='clear'></div>
-                </div>
-            </div>
-
+            {{render view="partial_header" advanceRenderingConfig="INCLUDE"}}
+            {{render view="partial_illustration" parameters=(obj illustration=(JSONstringify template.illustration)) advanceRenderingConfig="INCLUDE"}}
             <div id="content">
                 <div class="container_16">
                     <!--start grid_10-->
                     <div class='grid_10'>
-                        {{render content=template.area.mainContent}}
+                        {{render content=template.pagecontent.main}}
                         <div class='clear'></div>
                     </div>
                     <!--stop grid_10-->
                     <!--start grid_6-->
                     <div class='grid_6'>
-                        {{render content=template.area.aside}}
+                        {{render content=template.pagecontent.aside}}
                         <div class='clear'></div>
                     </div>
                     <!--stop grid_6-->
                     <div class='clear'></div>
                 </div>
             </div>
-            {{render view="partialFooter" advanceRenderingConfig="INCLUDE"}}
+            {{render view="partial_footer" advanceRenderingConfig="INCLUDE"}}
         </div>
-        {{render view="partialBodyCss" advanceRenderingConfig="INCLUDE"}}
+        {{render view="partial_body_css" advanceRenderingConfig="INCLUDE"}}
     </body>
 </html>
 

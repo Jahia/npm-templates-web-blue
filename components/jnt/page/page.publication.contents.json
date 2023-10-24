@@ -1,0 +1,61 @@
+{
+  "illustration": {
+    "name": "illustration",
+    "nodeType": "jnt:absoluteArea",
+    "properties":{
+      "j:level": "1",
+      "j:allowedTypes": ["jnt:imageReference"]
+    }
+  },
+  "pagecontent": {
+    "main": {
+      "breadcrumb": {
+        "name": "breadcrumb",
+        "nodeType": "jnt:pageBreadcrumb",
+        "properties": {
+          "displayHome": "true",
+          "displayCurrentPage": "true",
+          "displayLinkOnCurrentPage": "false",
+          "displayOnFirstLevel": "false"
+        }
+      },
+      "publications": {
+        "name": "publications",
+        "nodeType":"jnt:area",
+        "properties": {
+          "j:allowedTypes": ["jnt:publication"]
+        }
+      }
+    },
+    "aside": {
+      "facets": {
+        "name": "facets",
+        "nodeType": "jnt:facets",
+        "boundComponentRelativePath": "/publications",
+        "properties": {
+          "j:type": "jnt:publication"
+        },
+        "children": [
+          {
+            "name": "field-hierarchical-facet",
+            "nodeType": "jnt:fieldHierarchicalFacet",
+            "properties": {
+              "facet": "Categories",
+              "field": "jmix:categorized;j:defaultCategory",
+              "limit": "100",
+              "mincount": "1",
+              "missing": "false",
+              "offset": "0",
+              "prefix": "/sites/systemsite/categories"
+            },
+            "i18nProperties": {
+              "en": {
+                "label": "Categories"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,14 +1,14 @@
 {
-  "area": {
-    "illustration": {
-      "name": "illustration",
-      "nodeType": "jnt:area",
-      "properties":{
-        "j:areaView": "easySlider-content",
-        "j:allowedTypes": ["jnt:banner"]
-      }
-    },
-    "mainContent": {"name":"mainContent","nodeType":"jnt:area"},
+  "illustration": {
+    "name": "illustration",
+    "nodeType": "jnt:area",
+    "properties":{
+      "j:areaView": "easySlider-content",
+      "j:allowedTypes": ["jnt:banner"]
+    }
+  },
+  "pagecontent": {
+    "main": {"name":"maincontent","nodeType":"jnt:area"},
     "aside": {"name":"aside","nodeType":"jnt:area"}
   }
 }
