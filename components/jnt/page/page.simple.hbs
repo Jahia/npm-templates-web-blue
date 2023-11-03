@@ -11,16 +11,17 @@
                 <div class="container_16">
                     <!--start grid_10-->
                     <div class='grid_10'>
-                        {{render content=(obj name="pagetitle" nodeType="jnt:pageTitle")}}
-                        {{render content=template.pagecontent.main.breadcrumb}}
-                        {{render content=(obj name="maincontent" nodeType="jnt:area")}}
+                        {{#each template.content.contentCol1}}
+                            {{render content=this}}
+                        {{/each}}
                         <div class='clear'></div>
                     </div>
                     <!--stop grid_10-->
                     <!--start grid_6-->
                     <div class='grid_6'>
-                        {{render content=template.pagecontent.aside.sideMenu}}
-                        {{render content=(obj name="Right-column" nodeType="jnt:area")}}
+                        {{#each template.content.contentCol2}}
+                            {{render content=this}}
+                        {{/each}}
                         <div class='clear'></div>
                     </div>
                     <!--stop grid_6-->

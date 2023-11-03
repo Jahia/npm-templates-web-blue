@@ -1,8 +1,8 @@
-{{loadJSON 'page.partial_footer.contents.json' 'template'}}
+{{loadJSON 'page.base.contents.json' 'template'}}
 <div id="footerTop">
     <div class="container_16">
         <div class=" noprint">
-            {{#each  template.area.footerTop}}
+            {{#each  template.footerTop}}
                 <!--start grid_4-->
                 <div class='grid_4'>
                     {{render content=this }}
@@ -17,18 +17,13 @@
 
 <div id="footer">
     <div class="container_16">
-        <!--start grid_8-->
-        <div class='grid_8'>
-            {{render content=template.area.footer.footerLeft}}
-            <div class='clear'></div>
-        </div>
-        <!--stop grid_8-->
-        <!--start grid_8-->
-        <div class='grid_8'>
-            {{render content=template.area.footer.footerRight}}
-            <div class='clear'></div>
-        </div>
-        <!--stop grid_8-->
-        <div class='clear'></div>
+        {{#each template.footer}}
+            <!--start grid_8-->
+            <div class='grid_8'>
+                {{render content=this }}
+                <div class='clear'></div>
+            </div>
+            <!--stop grid_8-->
+        {{/each}}
     </div>
 </div>

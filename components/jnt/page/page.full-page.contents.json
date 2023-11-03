@@ -7,9 +7,10 @@
       "j:allowedTypes": ["jnt:imageReference"]
     }
   },
-  "pagecontent": {
-    "main": {
-      "breadcrumb": {
+  "content": {
+    "rowCol1": [
+      {"name": "pageTitle","nodeType": "jnt:pageTitle"},
+      {
         "name": "pageBreadcrumb",
         "nodeType": "jnt:pageBreadcrumb",
         "properties": {
@@ -18,7 +19,8 @@
           "displayLinkOnCurrentPage": "false",
           "displayOnFirstLevel": "false"
         }
-      }
-    }
+      },
+      {"name":"maincontent","nodeType":"jnt:area"}
+    ]
   }
 }

@@ -7,9 +7,10 @@
       "j:allowedTypes": ["jnt:imageReference"]
     }
   },
-  "pagecontent": {
-    "main": {
-      "breadcrumb": {
+  "content": {
+    "contentCol1": [
+      {"name": "pageTitle","nodeType": "jnt:pageTitle"},
+      {
         "name": "pageBreadcrumb",
         "nodeType": "jnt:pageBreadcrumb",
         "properties": {
@@ -19,7 +20,7 @@
           "displayOnFirstLevel": "false"
         }
       },
-      "content": {
+      {
         "name": "maincontent",
         "nodeType": "jnt:area",
         "properties": {
@@ -28,10 +29,10 @@
           ]
         }
       }
-    },
-    "aside": {
-      "sideMenu": {
-        "name": "navMenu",
+    ],
+    "contentCol2": [
+      {
+        "name": "side-menu",
         "nodeType": "jnt:navMenu",
         "properties": {
           "j:baselineNode": "home",
@@ -40,7 +41,8 @@
           "j:menuItemView":"menuElement",
           "j:styleName": "navigationN2-2"
         }
-      }
-    }
+      },
+      {"name":"Right-column","nodeType":"jnt:area"}
+    ]
   }
 }

@@ -12,9 +12,9 @@
                 <div class="container_16">
                     <!--start grid_16-->
                     <div class='grid_16'>
-                        {{render content=(obj name="pagetitle" nodeType="jnt:pageTitle")}}
-                        {{render content=template.pagecontent.main.breadcrumb}}
-                        {{render content=(obj name="maincontent" nodeType="jnt:area")}}
+                        {{#each template.content.rowCol1}}
+                            {{render content=this}}
+                        {{/each}}
                         <div class='clear'></div>
                     </div>
                     <!--stop grid_16-->

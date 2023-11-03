@@ -11,20 +11,15 @@
             <div id="content">
                 <div class="container_16">
                     <div class='grid_11'>
-                        {{render content=(obj name="pageTitle" nodeType="jnt:pageTitle")}}
-                        {{render content=template.pagecontent.main.breadcrumb}}
-                        {{render content=(obj name="listA" nodeType="jnt:area")}}
-                        {{!KO}}
-                        {{!render content=(obj name="events" nodeType="jnt:area")
-                                 properties=(obj j:allowedTypes=(arr "jnt:event"))}}
-                        {{render content=template.pagecontent.main.events}}
+                        {{#each template.row1.row1Col1}}
+                            {{render content=this}}
+                        {{/each}}
                         <div class='clear'></div>
                     </div>
                     <div class='grid_5'>
-                        {{!render view="partialNav2" advanceRenderingConfig="INCLUDE"}}
-                        {{render content=template.pagecontent.aside.sideMenu}}
-                        {{render content=template.pagecontent.aside.calendar}}
-                        {{render content=template.pagecontent.aside.facets view="default" }}
+                        {{#each template.row1.row1Col2}}
+                            {{render content=this}}
+                        {{/each}}
                         <div class='clear'></div>
                     </div>
                     <div class='clear'></div>

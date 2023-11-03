@@ -7,9 +7,10 @@
       "j:allowedTypes": ["jnt:imageReference"]
     }
   },
-  "pagecontent": {
-    "main": {
-      "breadcrumb": {
+  "row1": {
+    "row1Col1": [
+      {"name": "pageTitle","nodeType": "jnt:pageTitle"},
+      {
         "name": "breadcrumb",
         "nodeType": "jnt:pageBreadcrumb",
         "properties": {
@@ -19,16 +20,19 @@
           "displayOnFirstLevel": "false"
         }
       },
-      "events": {
+      {"name": "listA","nodeType": "jnt:area"},
+      {
         "name": "events",
-        "nodeType":"jnt:area",
+        "nodeType": "jnt:area",
         "properties": {
-          "j:allowedTypes": ["jnt:event"]
+          "j:allowedTypes": [
+            "jnt:event"
+          ]
         }
       }
-    },
-    "aside": {
-      "sideMenu": {
+    ],
+    "row1Col2": [
+      {
         "name": "side-menu",
         "nodeType": "jnt:navMenu",
         "properties": {
@@ -38,7 +42,7 @@
           "j:styleName":"navigationN2"
         }
       },
-      "calendar": {
+      {
         "name": "calendar",
         "nodeType": "jnt:calendar",
         "boundComponentRelativePath": "/events",
@@ -47,7 +51,7 @@
           "endDateProperty": "endDate"
         }
       },
-      "facets": {
+      {
         "name": "facets",
         "nodeType": "jnt:facets",
         "boundComponentRelativePath": "/events",
@@ -171,6 +175,6 @@
           }
         ]
       }
-    }
+    ]
   }
 }

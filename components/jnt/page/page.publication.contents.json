@@ -7,9 +7,10 @@
       "j:allowedTypes": ["jnt:imageReference"]
     }
   },
-  "pagecontent": {
-    "main": {
-      "breadcrumb": {
+  "content": {
+    "row1Ccol1": [
+      {"name": "pageTitle","nodeType": "jnt:pageTitle"},
+      {
         "name": "breadcrumb",
         "nodeType": "jnt:pageBreadcrumb",
         "properties": {
@@ -19,16 +20,17 @@
           "displayOnFirstLevel": "false"
         }
       },
-      "publications": {
+      {"name": "listA","nodeType": "jnt:area"},
+      {
         "name": "publications",
         "nodeType":"jnt:area",
         "properties": {
           "j:allowedTypes": ["jnt:publication"]
         }
       }
-    },
-    "aside": {
-      "facets": {
+    ],
+    "row1Col2": [
+      {
         "name": "facets",
         "nodeType": "jnt:facets",
         "boundComponentRelativePath": "/publications",
@@ -56,6 +58,6 @@
           }
         ]
       }
-    }
+    ]
   }
 }

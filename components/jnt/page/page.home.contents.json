@@ -7,8 +7,12 @@
       "j:allowedTypes": ["jnt:banner"]
     }
   },
-  "pagecontent": {
-    "main": {"name":"maincontent","nodeType":"jnt:area"},
-    "aside": {"name":"aside","nodeType":"jnt:area"}
+  "content": {
+    "contentCol1": [
+      {"name":"maincontent","nodeType":"jnt:area"}
+    ],
+    "contentCol2":[
+      {"name":"aside","nodeType":"jnt:area"}
+    ]
   }
 }
