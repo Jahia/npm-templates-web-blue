@@ -8,7 +8,7 @@
     }
   },
   "content": {
-    "row1Ccol1": [
+    "row1Col1": [
       {"name": "pageTitle","nodeType": "jnt:pageTitle"},
       {
         "name": "breadcrumb",

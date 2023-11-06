@@ -1,4 +1,4 @@
-{{loadJSON 'page.publication.contents.json' 'template'}}
+{{loadJSON 'page.qa-list.contents.json' 'template'}}
 <html>
     <head>
         {{render view="partial_head_common" advanceRenderingConfig="INCLUDE"}}
@@ -11,7 +11,7 @@
                 <div class="container_16">
                     <!--start grid_11-->
                     <div class='grid_11'>
-                        {{#each template.content.row1Col1}}
+                        {{#each template.row1.row1Col1}}
                             {{render content=this}}
                         {{/each}}
                         <div class='clear'></div>
@@ -19,7 +19,7 @@
                     <!--stop grid_11-->
                     <!--start grid_5-->
                     <div class='grid_5'>
-                        {{#each template.content.row1Col2}}
+                        {{#each template.row1.row1Col2}}
                             {{render content=this}}
                         {{/each}}
                         <div class='clear'></div>
