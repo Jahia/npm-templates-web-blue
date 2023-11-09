@@ -20,38 +20,21 @@ jobs:
 
   build:
     name: Build Module
-    runs-on: self-hosted
-    needs: static-analysis
-    env:
-      NEXUS_INTERNAL_URL: ${{ secrets.NEXUS_INTERNAL_URL }}
-    container:
-      image: jahia/cimg-mvn-cache:ga_cimg_openjdk_8.0.312-node
-      credentials:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: jahia/jahia-modules-action/build-step-npm@v2
 
   npm-publish:
     name: Publish NPM Module to Maven repository
-    runs-on: self-hosted
-    env:
-        NEXUS_INTERNAL_URL: ${{ secrets.NEXUS_INTERNAL_URL }}
-    container:
-      image: jahia/cimg-mvn-cache:ga_cimg_openjdk_8.0.312-node
-      credentials:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
-    needs: build
+    runs-on: ubuntu-latest
     steps:           
         - uses: actions/checkout@v3
         - name: Publish tests package NPM
           uses: jahia/jahia-modules-action/publish-npm@v2
           with:
-            mvn_settings_filepath: ${{ inputs.mvn_settings_filepath }}
-            nexus_username: ${{ inputs.nexus_username }}
-            nexus_password: ${{ inputs.nexus_password }}
+            mvn_settings_filepath: .github/maven.settings.xml
+            nexus_username: ${{ secrets.NEXUS_USERNAME }}
+            nexus_password: ${{ secrets.NEXUS_PASSWORD }}
             module_path: ./
-            node_version: ${{ inputs.node_version }}
-            tests_module_path: ./
+            node_version: 18
