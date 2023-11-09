@@ -38,10 +38,7 @@ jobs:
     runs-on: self-hosted
     needs: build
     steps:           
-        - uses: jahia/jahia-modules-action/publish-npm@v2
-          with: 
-            nexus_username: ${{ inputs.nexus_username }}
-            nexus_password: ${{ inputs.nexus_password }}
+        - uses: actions/checkout@v3
         - name: Publish tests package NPM
           uses: jahia/jahia-modules-action/publish-npm@v2
           with:
