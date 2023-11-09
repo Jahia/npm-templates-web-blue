@@ -36,6 +36,13 @@ jobs:
   npm-publish:
     name: Publish NPM Module to Maven repository
     runs-on: self-hosted
+    env:
+        NEXUS_INTERNAL_URL: ${{ secrets.NEXUS_INTERNAL_URL }}
+    container:
+      image: jahia/cimg-mvn-cache:ga_cimg_openjdk_8.0.312-node
+      credentials:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
     needs: build
     steps:           
         - uses: actions/checkout@v3
