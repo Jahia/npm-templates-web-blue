@@ -1,18 +1,18 @@
-{{loadJSON 'page.simple.contents.json' 'template'}}
+{{jLoadJSON 'page.simple.contents.json' 'template'}}
 <html>
     <head>
-        {{render view="partial_head_common" advanceRenderingConfig="INCLUDE"}}
+        {{jRender view="partial_head_common" advanceRenderingConfig="INCLUDE"}}
     </head>
     <body>
         <div class="bodywrapper">
-            {{render view="partial_header" advanceRenderingConfig="INCLUDE"}}
-            {{render view="partial_illustration" parameters=(obj illustration=(JSONstringify template.illustration)) advanceRenderingConfig="INCLUDE"}}
+            {{jRender view="partial_header" advanceRenderingConfig="INCLUDE"}}
+            {{jRender view="partial_illustration" parameters=(jObj illustration=(JSONstringify template.illustration)) advanceRenderingConfig="INCLUDE"}}
             <div id="content">
                 <div class="container_16">
                     <!--start grid_10-->
                     <div class='grid_10'>
                         {{#each template.content.contentCol1}}
-                            {{render content=this}}
+                            {{jRender content=this}}
                         {{/each}}
                         <div class='clear'></div>
                     </div>
@@ -20,7 +20,7 @@
                     <!--start grid_6-->
                     <div class='grid_6'>
                         {{#each template.content.contentCol2}}
-                            {{render content=this}}
+                            {{jRender content=this}}
                         {{/each}}
                         <div class='clear'></div>
                     </div>
@@ -28,8 +28,8 @@
                     <div class='clear'></div>
                 </div>
             </div>
-            {{render view="partial_footer" advanceRenderingConfig="INCLUDE"}}
+            {{jRender view="partial_footer" advanceRenderingConfig="INCLUDE"}}
         </div>
-        {{render view="partial_body_css" advanceRenderingConfig="INCLUDE"}}
+        {{jRender view="partial_body_css" advanceRenderingConfig="INCLUDE"}}
     </body>
 </html>

@@ -1,32 +1,32 @@
-{{loadJSON 'page.events.contents.json' 'template'}}
+{{jLoadJSON 'page.events.contents.json' 'template'}}
 <html>
     <head>
-        {{render view="partial_head_common" advanceRenderingConfig="INCLUDE"}}
+        {{jRender view="partial_head_common" advanceRenderingConfig="INCLUDE"}}
     </head>
     <body>
         <div class="bodywrapper">
-            {{render view="partial_header" advanceRenderingConfig="INCLUDE"}}
-            {{render view="partial_illustration" parameters=(obj illustration=(JSONstringify template.illustration)) advanceRenderingConfig="INCLUDE"}}
+            {{jRender view="partial_header" advanceRenderingConfig="INCLUDE"}}
+            {{jRender view="partial_illustration" parameters=(jObj illustration=(JSONstringify template.illustration)) advanceRenderingConfig="INCLUDE"}}
 
             <div id="content">
                 <div class="container_16">
                     <div class='grid_11'>
                         {{#each template.row1.row1Col1}}
-                            {{render content=this}}
+                            {{jRender content=this}}
                         {{/each}}
                         <div class='clear'></div>
                     </div>
                     <div class='grid_5'>
                         {{#each template.row1.row1Col2}}
-                            {{render content=this}}
+                            {{jRender content=this}}
                         {{/each}}
                         <div class='clear'></div>
                     </div>
                     <div class='clear'></div>
                 </div>
             </div>
-            {{render view="partial_footer" advanceRenderingConfig="INCLUDE"}}
+            {{jRender view="partial_footer" advanceRenderingConfig="INCLUDE"}}
         </div>
-        {{render view="partial_body_css" advanceRenderingConfig="INCLUDE"}}
+        {{jRender view="partial_body_css" advanceRenderingConfig="INCLUDE"}}
     </body>
 </html>

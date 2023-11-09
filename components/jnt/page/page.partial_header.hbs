@@ -1,10 +1,10 @@
-{{loadJSON 'page.base.contents.json' 'template'}}
+{{jLoadJSON 'page.base.contents.json' 'template'}}
 <div id="header">
     <div class="container_16">
         <!--start grid_6-->
         <div class='grid_6'>
             {{#each  template.header.headerCol1}}
-                {{render content=this }}
+                {{jRender content=this }}
             {{/each}}
             <div class='clear'></div>
         </div>
@@ -12,7 +12,7 @@
         <!--start grid_10-->
         <div class='grid_10'>
             {{#each  template.header.headerCol2}}
-                {{render content=this }}
+                {{jRender content=this }}
             {{/each}}
             <div class='clear'></div>
         </div>
@@ -24,7 +24,7 @@
     <div class="container_16">
         <!--start grid_16-->
         <div class='grid_16'>
-            {{render content=template.headerBottom.navMenu}}
+            {{jRender content=template.headerBottom.navMenu}}
             <div class='clear'></div>
         </div>
         <!--stop grid_16-->
