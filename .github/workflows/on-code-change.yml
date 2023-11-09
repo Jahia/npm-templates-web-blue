@@ -45,5 +45,5 @@ jobs:
             nexus_username: ${{ inputs.nexus_username }}
             nexus_password: ${{ inputs.nexus_password }}
             module_path: ${{ inputs.tests_module_path }}
-            node-version: ${{ inputs.node_version }}
-            github_artifact_retention: ${{ inputs.github_artifact_retention }}
+            node_version: ${{ inputs.node_version }}
+            tests_module_path: ${{ inputs.tests_module_path }}
