@@ -19,7 +19,7 @@ jobs:
           auditci_level: critical
 
   build:
-    name: Build Module
+    name: Build NPM Module
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,10 +27,11 @@ jobs:
 
   npm-publish:
     name: Publish NPM Module to Maven repository
+    needs: build
     runs-on: ubuntu-latest
     steps:           
         - uses: actions/checkout@v3
-        - name: Publish tests package NPM
+        - name: Publish NPM package
           uses: jahia/jahia-modules-action/publish-npm@v2
           with:
             mvn_settings_filepath: .github/maven.settings.xml
