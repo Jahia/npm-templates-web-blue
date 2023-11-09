@@ -44,6 +44,6 @@ jobs:
             mvn_settings_filepath: ${{ inputs.mvn_settings_filepath }}
             nexus_username: ${{ inputs.nexus_username }}
             nexus_password: ${{ inputs.nexus_password }}
-            module_path: ${{ inputs.tests_module_path }}
+            module_path: ./
             node_version: ${{ inputs.node_version }}
-            tests_module_path: ${{ inputs.tests_module_path }}
+            tests_module_path: ./
