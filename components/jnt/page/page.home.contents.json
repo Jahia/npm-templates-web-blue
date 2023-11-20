@@ -1,0 +1,18 @@
+{
+  "illustration": {
+    "name": "illustration",
+    "nodeType": "jnt:area",
+    "properties":{
+      "j:areaView": "easySlider-content",
+      "j:allowedTypes": ["jnt:banner"]
+    }
+  },
+  "content": {
+    "contentCol1": [
+      {"name":"maincontent","nodeType":"jnt:area"}
+    ],
+    "contentCol2":[
+      {"name":"aside","nodeType":"jnt:area"}
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "header": {
+    "headerCol1": [
+      {
+        "name": "link-to-edit-mode",
+        "nodeType": "jnt:gotoEdit",
+        "mixins":["jmix:requiredPermissions"],
+        "properties":{
+          "j:requireLoggedUser":"false",
+          "j:requirePrivilegedUser":"false",
+          "j:requiredPermissionNames":["jContentAccess"]
+        }
+      },
+      {
+        "name": "header-left",
+        "nodeType": "jnt:absoluteArea"
+      }
+    ],
+    "headerCol2": [
+      {
+        "name": "Header-right",
+        "nodeType": "jnt:absoluteArea"
+      }
+    ]
+  },
+  "headerBottom": {
+    "navMenu": {
+      "name": "navMenu",
+      "nodeType": "jnt:navMenu",
+      "properties":{
+        "j:baselineNode":"home",
+        "j:maxDepth":"1",
+        "j:startLevel":"0",
+        "j:menuItemView":"menuElement",
+        "j:styleName":"navigationN1"
+      }
+    }
+  },
+  "footerTop": [
+    {
+      "name": "topfooter1",
+      "nodeType": "jnt:absoluteArea"
+    },
+    {
+      "name": "topfooter2",
+      "nodeType": "jnt:absoluteArea"
+    },
+    {
+      "name": "topfooter3",
+      "nodeType": "jnt:absoluteArea"
+    },
+    {
+      "name": "topfooter4",
+      "nodeType": "jnt:absoluteArea"
+    }
+  ],
+  "footer": [
+    {
+      "name": "footer-left",
+      "nodeType": "jnt:absoluteArea"
+    },
+    {
+      "name": "footer-right",
+      "nodeType": "jnt:absoluteArea"
+    }
+  ]
+}

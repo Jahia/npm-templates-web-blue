@@ -1,0 +1,40 @@
+{
+  "illustration": {
+    "name": "illustration",
+    "nodeType": "jnt:absoluteArea",
+    "properties":{
+      "j:level": "1",
+      "j:allowedTypes": ["jnt:imageReference"]
+    }
+  },
+  "content": {
+    "contentCol1": [
+      {"name": "pageTitle","nodeType": "jnt:pageTitle"},
+      {
+        "name": "pageBreadcrumb",
+        "nodeType": "jnt:pageBreadcrumb",
+        "properties": {
+          "displayHome": "true",
+          "displayCurrentPage": "true",
+          "displayLinkOnCurrentPage": "false",
+          "displayOnFirstLevel": "false"
+        }
+      },
+      {"name":"maincontent","nodeType":"jnt:area"}
+    ],
+    "contentCol2":[
+      {
+        "name": "side-menu",
+        "nodeType": "jnt:navMenu",
+        "properties": {
+          "j:baselineNode": "home",
+          "j:maxDepth": "3",
+          "j:startLevel": "1",
+          "j:menuItemView":"menuElement",
+          "j:styleName": "navigationN2-2"
+        }
+      },
+      {"name":"Right-column","nodeType":"jnt:area"}
+    ]
+  }
+}

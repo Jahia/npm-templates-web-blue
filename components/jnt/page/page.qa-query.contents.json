@@ -1,0 +1,52 @@
+{
+  "illustration": {
+    "name": "illustration",
+    "nodeType": "jnt:absoluteArea",
+    "properties":{
+      "j:level": "1",
+      "j:allowedTypes": ["jnt:imageReference"]
+    }
+  },
+  "row1": {
+    "row1Col1": [
+      {"name": "pageTitle","nodeType": "jnt:pageTitle"},
+      {
+        "name": "breadcrumb",
+        "nodeType": "jnt:pageBreadcrumb",
+        "properties": {
+          "displayHome": "true",
+          "displayCurrentPage": "true",
+          "displayLinkOnCurrentPage": "false",
+          "displayOnFirstLevel": "false"
+        }
+      },
+      {"name": "listA","nodeType": "jnt:area"},
+      {
+        "name": "get-news",
+        "nodeType": "jnt:query",
+        "properties": {
+          "jcr:language":"JCR-SQL2",
+          "jcr:statement":"SELECT * FROM [jnt:news]",
+          "maxItems":"20"
+        },
+        "i18nProperties": {
+          "en": {
+            "jcr:title": "Get News"
+          }
+        }
+      }
+    ],
+    "row1Col2": [
+      {
+        "name": "side-menu",
+        "nodeType": "jnt:navMenu",
+        "properties": {
+          "j:baselineNode":"home",
+          "j:maxDepth":"3",
+          "j:startLevel":"1",
+          "j:styleName":"navigationN2"
+        }
+      }
+    ]
+  }
+}

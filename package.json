@@ -12,13 +12,30 @@
   "jahia": {
     "module-type": "templatesSet",
     "server": "dist/main.js",
-    "Jahia-Depends": "calendar,default,default-skins,event,facets,grid,news,profile,publication,search,sitemap,skins"
+    "Jahia-Depends": "calendar,default,default-skins,event,facets,grid,news,profile,publication,search,sitemap,skins",
+    "maven": {
+      "groupId": "org.jahia.modules.npm",
+      "distributionManagement": {
+        "repository": {
+          "id": "jahia-releases",
+          "url": "https://devtools.jahia.com/nexus/content/repositories/jahia-releases"
+        },
+        "snapshotRepository": {
+          "id": "jahia-snapshots",
+          "url": "https://devtools.jahia.com/nexus/content/repositories/jahia-snapshots"
+        }
+      }
+    }
   },
   "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
     "@jahia/eslint-config": "^2.1.2",
     "@jahia/scripts": "^1.3.3",
     "eslint": "^8.43.0",
     "eslint-plugin-jest": "latest",
+    "eslint-plugin-json": "^2.1.0",
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
     "extra-watch-webpack-plugin": "^1.0.3",
