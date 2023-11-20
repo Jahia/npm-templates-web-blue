@@ -45,8 +45,7 @@
     "webpack-shell-plugin-next": "^2.3.1"
   },
   "dependencies": {
-    "handlebars": "^4.7.6",
-    "handlebars-helper-repeat": "^2.0.0"
+    "handlebars": "^4.7.6"
   },
   "maven": {
     "groupId": "org.jahia.modules.npm",

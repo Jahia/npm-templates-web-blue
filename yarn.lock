@@ -5109,15 +5109,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"handlebars-helper-repeat@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "handlebars-helper-repeat@npm:2.0.0"
-  dependencies:
-    is-number: ^5.0.0
-  checksum: 7f57a9fa875340f73f920507a459b1dee3744990d5480dc2eb6c7b5924bb84c6f641c457e32063f56b037ffa2ca7a1ee7f3ad4482d4e98fd16e6c461a93fa2c4
-  languageName: node
-  linkType: hard
-
 "handlebars-loader@npm:^1.7.3":
   version: 1.7.3
   resolution: "handlebars-loader@npm:1.7.3"
@@ -5581,13 +5572,6 @@ __metadata:
   dependencies:
     kind-of: ^3.0.2
   checksum: 0c62bf8e9d72c4dd203a74d8cfc751c746e75513380fef420cda8237e619a988ee43e678ddb23c87ac24d91ac0fe9f22e4ffb1301a50310c697e9d73ca3994e9
-  languageName: node
-  linkType: hard
-
-"is-number@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "is-number@npm:5.0.0"
-  checksum: 3092943a4efc39b44488d8232eb19a3c43e2d93fb5e7efa9bde0d111e84d67c9363eac25b2be6d46a5105c79823d03fc247a8a000594edecbddf00f471105e00
   languageName: node
   linkType: hard
 
@@ -6294,7 +6278,6 @@ __metadata:
     eslint-plugin-react-hooks: latest
     extra-watch-webpack-plugin: ^1.0.3
     handlebars: ^4.7.6
-    handlebars-helper-repeat: ^2.0.0
     handlebars-loader: ^1.7.3
     webpack: ^5.88.1
     webpack-cli: ^5.1.4
