@@ -87,7 +87,7 @@ body {
 	list-style:none;
 }
  .arrowList li {
-	background: url(img/arrow.png) no-repeat 0 2px;
+	background: url(../images/arrow.png) no-repeat 0 2px;
 	padding:0 0 0 12px;
 	clear:left;
 	list-style:none;
@@ -151,7 +151,7 @@ body {
 {
 	padding:0 1em 0 0;
 	margin:0;
-	background: url(img/breadcrumb-separator.png) no-repeat 100% 50% ;
+	background: url(../images/breadcrumb-separator.png) no-repeat 100% 50% ;
 	color:#333;
 	text-decoration:none;
 }
@@ -164,7 +164,7 @@ body {
 *  header
 ******************************************************************************/
  #header{
-	background:#2c8bc5 url(img/header-bg.png) repeat-x bottom left;
+	background:#2c8bc5 url(../images/header-bg.png) repeat-x bottom left;
 	color:#fff;
 	padding-top:5px;
 	padding-bottom:5px;
@@ -202,7 +202,7 @@ Search form top
 *  header
 ******************************************************************************/
  #headerBottom{
-	background:#fff url(img/headerBottom-bg.png) repeat-x bottom left;
+	background:#fff url(../images/headerBottom-bg.png) repeat-x bottom left;
 	position:relative;
 	z-index:900;
 	width:100%
@@ -212,7 +212,7 @@ Search form top
 *  illustration
 ******************************************************************************/
  #illustration{
-	background:#f7f7f7 url(img/illustration-bg.png) repeat-y 50% 0%;
+	background:#f7f7f7 url(../images/illustration-bg.png) repeat-y 50% 0%;
 	border-bottom:1px solid #efefef;
 	position:relative;
 	z-index:900;
@@ -235,7 +235,7 @@ Search form top
 *  footerTop
 ******************************************************************************/
  #footerTop{
-	background:transparent url(img/footer-bg.png) repeat-x bottom left;
+	background:transparent url(../images/footer-bg.png) repeat-x bottom left;
 	background-color:#151615;
 	position:relative;
 	z-index:500;
@@ -367,7 +367,7 @@ Search form top
 	padding-bottom:20px;
 	margin-bottom:10px;
 	margin-top:15px;
-	background:transparent url(img/hr-bg.png) repeat-x bottom left;
+	background:transparent url(../images/hr-bg.png) repeat-x bottom left;
 }
  h2.pageTitle, .pageTitle {
 	margin:0;
@@ -407,7 +407,7 @@ Search form top
 	font-size:1em;
 	color:#333;
 	padding:0 0.5em;
-	background:#3297cb url(img/contactformlegend.png) repeat-x bottom left;
+	background:#3297cb url(../images/contactformlegend.png) repeat-x bottom left;
 	border:1px solid #ccc;
 	display:inline;
 	font-weight:bold;
@@ -416,12 +416,12 @@ Search form top
 
  hr {
 	height:2px;
-	background:transparent url(img/hr-bg.png) repeat-x bottom left;
+	background:transparent url(../images/hr-bg.png) repeat-x bottom left;
 	border: none;
 	margin : 18px 0;
 }
  blockquote {
-	background:#E0E0E0 url(img/blockquote.png) no-repeat top left;
+	background:#E0E0E0 url(../images/blockquote.png) no-repeat top left;
 	border:1px solid #A5A5A5;
 	font-style:italic;
 	margin-bottom:15px;
@@ -547,7 +547,7 @@ Search form top
 	border: 1px solid #ccc;
 	padding:0.5em 0.5em;
 	margin:0.5em 0;
-	background:#e1e1e1  url(img/1px-white.png) repeat-x top left;
+	background:#e1e1e1  url(../images/1px-white.png) repeat-x top left;
 }
  .paginationPosition {
 	float:left;
@@ -593,7 +593,7 @@ Search form top
 	border: 1px solid #ccc;
 	padding:0.5em 0.5em;
 	margin:0.5em 0;
-	background:#e1e1e1  url(img/1px-white.png) repeat-x top left;
+	background:#e1e1e1  url(../images/1px-white.png) repeat-x top left;
 }
  .alphabeticalLabel {
 	float:left;
@@ -651,7 +651,7 @@ Search form top
 }
 
  input.button,  button {
-	background:#043b9d url(img/bg-button.png) repeat-x top left;
+	background:#043b9d url(../images/bg-button.png) repeat-x top left;
 	border:1px solid #003366;
 	outline:none;
 	color:#fff;
@@ -664,7 +664,7 @@ Search form top
 }
  .button:hover,  button:hover {
 	cursor: pointer;
-	background:#043b9d url(img/bg-button-on.png) repeat-x bottom left;
+	background:#043b9d url(../images/bg-button-on.png) repeat-x bottom left;
 	color:#fff;
 }
 
@@ -675,7 +675,7 @@ Search form top
   a.aButton,
   a.aButton:link,
   a.aButton:visited {
-	background: transparent url(img/button-right.png) no-repeat scroll top right;
+	background: transparent url(../images/button-right.png) no-repeat scroll top right;
 	display: block;
 	float: left;
 	height: 24px; /* CHANGE THIS VALUE ACCORDING TO IMAGE HEIGHT */
@@ -688,7 +688,7 @@ Search form top
 }
   a.aButton span {
 	/* Background left image */
-	background: transparent url(img/button-left.png) no-repeat;
+	background: transparent url(../images/button-left.png) no-repeat;
 	display: block;
 	line-height: 12px; /* CHANGE THIS VALUE ACCORDING TO BUTTONG HEIGHT */
 	padding: 6px 0 6px 18px;
@@ -810,7 +810,7 @@ border: 1px solid #fff;
 	clear:both;
 	list-style-type:none;
 	overflow:hidden;
-	background:transparent url(img/tab-bg.png) repeat-x bottom left;
+	background:transparent url(../images/tab-bg.png) repeat-x bottom left;
 	margin:0 0 10px 0;
 	padding:0;
 
@@ -826,7 +826,7 @@ border: 1px solid #fff;
 }
 
  .idTabs li a {
-	background:transparent url(img/tab-left.png) no-repeat scroll 0 0;
+	background:transparent url(../images/tab-left.png) no-repeat scroll 0 0;
 	color:#003399;
 	display:inline;
 	float:left;
@@ -846,7 +846,7 @@ border: 1px solid #fff;
 
 
  .idTabs li a span {
-	background:transparent url(img/tab-right.png) no-repeat scroll 100% 0;
+	background:transparent url(../images/tab-right.png) no-repeat scroll 100% 0;
 	color:#666;
 	cursor:pointer;
 	display:inline;
@@ -945,7 +945,7 @@ border: 1px solid #fff;
  -webkit-border-radius:10px;
  -moz-border-radius:10px;
  border-radius:10px;
- background:#ffebe8 url(img/error-messages.png) no-repeat 5px 50%;
+ background:#ffebe8 url(../images/error-messages.png) no-repeat 5px 50%;
 }
 /******************************************************************************
 * Links
@@ -958,7 +958,7 @@ border: 1px solid #fff;
  a.returnLink,
  a.returnLink:link,
  a.returnLink:visited{
-	background:#eaeaea url(img/returnlink.png) no-repeat 8px 3px;
+	background:#eaeaea url(../images/returnlink.png) no-repeat 8px 3px;
 	display: inline-block;
 	padding: 5px 10px 6px 30px;
 	color: #fff;
@@ -990,5 +990,5 @@ border: 1px solid #fff;
 	color: #000;
 	text-shadow: 0px -1px 1px #fff;
 	filter: dropshadow(color=#fff, offx=0, offy=-1);
-	background:#eaeaea url(img/returnlink.png) no-repeat 8px -29px;
+	background:#eaeaea url(../images/returnlink.png) no-repeat 8px -29px;
 }
