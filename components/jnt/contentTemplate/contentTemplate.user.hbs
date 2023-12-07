@@ -1,0 +1,23 @@
+{{jLoadJSON 'contentTemplate.user.contents.json' 'template'}}
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="bodywrapper">
+
+            <div id="content">
+                <div class="container_16">
+                    <!--start grid_16-->
+                    <div class='grid_16'>
+                        {{#each template.content.rowCol1}}
+                            {{jRender content=this}}
+                        {{/each}}
+                        <div class='clear'></div>
+                    </div>
+                    <!--stop grid_16-->
+                    <div class='clear'></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

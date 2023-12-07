@@ -1,0 +1,23 @@
+{
+    "illustration": {
+        "name": "illustration",
+        "nodeType": "jnt:absoluteArea",
+        "properties": {
+            "j:level": "1",
+            "j:allowedTypes": [
+                "jnt:imageReference"
+            ]
+        }
+    },
+    "content": {
+        "rowCol1": [
+            {
+                "name": "userDetails",
+                "nodeType": "jnt:userDetails",
+                "mixins": [
+                    "jmix:renderable"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "illustration": {
+        "name": "illustration",
+        "nodeType": "jnt:absoluteArea",
+        "properties": {
+            "j:level": "1",
+            "j:allowedTypes": [
+                "jnt:imageReference"
+            ]
+        }
+    },
+    "content": {
+        "rowCol1": [
+            {
+                "name": "mainResourceDisplay",
+                "nodeType": "jnt:mainResourceDisplay",
+                "properties": {
+                    "j:mainResourceView": "fullpage"
+                }
+            }
+        ]
+    }
+}
