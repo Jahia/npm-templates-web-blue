@@ -1,0 +1,32 @@
+{{jLoadJSON 'user.publicprofile.json' 'template'}}
+<html>
+    <head>
+        {{jRender view="partial_head_common" advanceRenderingConfig="INCLUDE"}}
+    </head>
+    <body>
+        <div class="bodywrapper">
+            {{jRender view="partial_header" advanceRenderingConfig="INCLUDE"}}
+            {{jRender view="partial_illustration" advanceRenderingConfig="INCLUDE"}}
+            <div id="content">
+                <div class="container_16">
+                    <div class="grid_16">
+                            <h4 class="box8-title box8-titleblue">
+                                {{template.publicProfile.properties.[jcr:title]}}
+                            </h4>
+                            <div class="box8">
+                                <div class="box8 box5padding box5marginbottom">
+                                    <div class="box8-content">
+                                        {{jRender content=template.userDetails}}
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            {{jRender view="partial_footer" advanceRenderingConfig="INCLUDE"}}
+        </div>
+        {{jRender view="partial_body_css" advanceRenderingConfig="INCLUDE"}}
+        {{jAddResources type="css" resources="skin.css"}}
+    </body>
+</html>
