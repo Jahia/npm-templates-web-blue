@@ -1,0 +1,15 @@
+{
+        "publicProfile":{
+            "mixins": ["jmix:skinnable", "jmix:style"],
+            "nodeType": "jnt:contentList",
+            "properties": {
+                "jcr:title": "Public Profile",
+                "j:skin": "skins.box8",
+                "j:style": "blue"
+            }
+        },
+        "userDetails": {
+            "mixins": ["jmix:renderable"],
+            "nodeType": "jnt:userDetails"
+        }
+}

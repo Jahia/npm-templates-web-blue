@@ -1,0 +1,16 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{{jMainContent varName="mainContent"}}
+{{#if mainContent.properties.[jcr:description]}}
+    <meta name="description" content="{{mainContent.properties.[jcr:description]}}" />
+{{/if}}
+{{#if mainContent.properties.[jcr:createdBy]}}
+    <meta name="author" content="{{mainContent.properties.[jcr:createdBy]}}" />
+{{/if}}
+{{#if mainContent.properties.[j:keywords]}}
+    <meta name="keywords" content="{{join mainContent.properties.[j:keywords]}}" />
+{{/if}}
+
+<link rel="stylesheet" type="text/css" href="{{ctx.currentModule}}/css/print.css" media="print" />
+<!--<title>{{!mainContent.displayableName}}</title>-->
+<title>{{mainContent.properties.[jcr:title]}}</title>
+

@@ -1,0 +1,29 @@
+{{jLoadJSON 'page.base.contents.json' 'template'}}
+<div id="footerTop">
+    <div class="container_16">
+        <div class=" noprint">
+            {{#each  template.footerTop}}
+                <!--start grid_4-->
+                <div class='grid_4'>
+                    {{jRender content=this }}
+                    <div class='clear'></div>
+                </div>
+                <!--stop grid_4-->
+            {{/each}}
+            <div class='clear'></div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container_16">
+        {{#each template.footer}}
+            <!--start grid_8-->
+            <div class='grid_8'>
+                {{jRender content=this }}
+                <div class='clear'></div>
+            </div>
+            <!--stop grid_8-->
+        {{/each}}
+    </div>
+</div>
