@@ -12,7 +12,7 @@
   "jahia": {
     "module-type": "templatesSet",
     "server": "dist/main.js",
-    "Jahia-Depends": "calendar,default,default-skins,event,facets,grid,news,profile,publication,search,sitemap,skins",
+    "module-dependencies": "calendar,default,default-skins,event,facets,grid,news,profile,publication,search,sitemap,skins",
     "maven": {
       "groupId": "org.jahia.modules.npm",
       "distributionManagement": {
@@ -45,6 +45,7 @@
     "webpack-shell-plugin-next": "^2.3.1"
   },
   "dependencies": {
+    "@jahia/js-server-engine": "^1.0.5",
     "handlebars": "^4.7.6"
   },
   "maven": {
@@ -64,5 +65,5 @@
     "node": ">=16.0.0",
     "yarn": ">=3.0.0"
   },
-  "packageManager": "yarn@3.6.1"
+  "packageManager": "yarn@4.0.2"
 }
