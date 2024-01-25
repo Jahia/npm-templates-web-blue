@@ -1,4 +1,12 @@
 {
+  "illustration": {
+    "name": "illustration",
+    "nodeType": "jnt:absoluteArea",
+    "properties":{
+      "j:level": "1",
+      "j:allowedTypes": ["jnt:imageReference"]
+    }
+  },
   "header": {
     "headerCol1": [
       {
