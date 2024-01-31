@@ -1,9 +1,9 @@
-{{jLoadJSON 'page.events.contents.json' 'template'}}
+{{jLoadJSON 'page.base.contents.json' 'template'}}
 <div id="illustration">
     <div class="container_16">
         <!--start grid_16-->
         <div class='grid_16'>
-            {{jRender content=(JSONparse template.illustration)}}
+            {{jRender content=template.illustration}}
             <div class='clear'></div>
         </div>
         <!--stop grid_16-->
