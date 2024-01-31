@@ -1,23 +1,26 @@
 <html>
+
 <head>
-        {{jRender view="partial_head_common" advanceRenderingConfig="INCLUDE"}}
-        {{jRender view="partial_body_css" advanceRenderingConfig="INCLUDE"}}
+    {{jRender view="partial_head_common" advanceRenderingConfig="INCLUDE"}}
+    {{jRender view="partial_body_css" advanceRenderingConfig="INCLUDE"}}
 </head>
+
 <body>
     <div class="bodywrapper">
-            {{jRender view="partial_header" advanceRenderingConfig="INCLUDE"}}
-            {{jRender view="partial_illustration" advanceRenderingConfig="INCLUDE"}}
-            <div id="content">
-                <div class="container_16">
-                    <div class='grid_16'>
-                            {{jRender path=currentContent.path}}
-                        <div class='clear'></div>
-                    </div>
+        {{jRender view="partial_header" advanceRenderingConfig="INCLUDE"}}
+        {{jRender view="partial_illustration" advanceRenderingConfig="INCLUDE"}}
+        <div id="content">
+            <div class="container_16">
+                <div class='grid_16'>
+                    {{jRender path=currentContent.path}}
                     <div class='clear'></div>
                 </div>
+                <div class='clear'></div>
             </div>
+        </div>
     </div>
     {{jRender view="partial_footer" advanceRenderingConfig="INCLUDE"}}
-</div>
+    </div>
 </body>
+
 </html>
