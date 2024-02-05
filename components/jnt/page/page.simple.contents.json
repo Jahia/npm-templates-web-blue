@@ -2,14 +2,19 @@
   "illustration": {
     "name": "illustration",
     "nodeType": "jnt:absoluteArea",
-    "properties":{
+    "properties": {
       "j:level": "1",
-      "j:allowedTypes": ["jnt:imageReference"]
+      "j:allowedTypes": [
+        "jnt:imageReference"
+      ]
     }
   },
   "content": {
     "contentCol1": [
-      {"name": "pageTitle","nodeType": "jnt:pageTitle"},
+      {
+        "name": "pageTitle",
+        "nodeType": "jnt:pageTitle"
+      },
       {
         "name": "pageBreadcrumb",
         "nodeType": "jnt:pageBreadcrumb",
@@ -20,9 +25,12 @@
           "displayOnFirstLevel": "false"
         }
       },
-      {"name":"maincontent","nodeType":"jnt:area"}
+      {
+        "name": "maincontent",
+        "nodeType": "jnt:area"
+      }
     ],
-    "contentCol2":[
+    "contentCol2": [
       {
         "name": "side-menu",
         "nodeType": "jnt:navMenu",
@@ -30,11 +38,14 @@
           "j:baselineNode": "home",
           "j:maxDepth": "3",
           "j:startLevel": "1",
-          "j:menuItemView":"menuElement",
+          "j:menuItemView": "menuElement",
           "j:styleName": "navigationN2-2"
         }
       },
-      {"name":"Right-column","nodeType":"jnt:area"}
+      {
+        "name": "Right-column",
+        "nodeType": "jnt:area"
+      }
     ]
   }
 }
