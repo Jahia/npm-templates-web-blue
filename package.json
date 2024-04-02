@@ -12,7 +12,7 @@
   "jahia": {
     "module-type": "templatesSet",
     "server": "dist/main.js",
-    "module-dependencies": "calendar,default,default-skins,event,facets,grid,news,profile,publication,search,sitemap,skins",
+    "module-dependencies": "calendar,default,legacy-default-components,default-skins,event,facets,grid,news,profile,publication,search,sitemap,skins",
     "maven": {
       "groupId": "org.jahia.modules.npm",
       "distributionManagement": {
