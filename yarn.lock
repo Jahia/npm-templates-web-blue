@@ -23,23 +23,25 @@ __metadata:
   linkType: hard
 
 "@apollo/client@npm:^3.5.5":
-  version: 3.8.9
-  resolution: "@apollo/client@npm:3.8.9"
+  version: 3.9.10
+  resolution: "@apollo/client@npm:3.9.10"
   dependencies:
     "@graphql-typed-document-node/core": "npm:^3.1.1"
+    "@wry/caches": "npm:^1.0.0"
     "@wry/equality": "npm:^0.5.6"
     "@wry/trie": "npm:^0.5.0"
     graphql-tag: "npm:^2.12.6"
     hoist-non-react-statics: "npm:^3.3.2"
     optimism: "npm:^0.18.0"
     prop-types: "npm:^15.7.2"
+    rehackt: "npm:0.0.6"
     response-iterator: "npm:^0.2.6"
     symbol-observable: "npm:^4.0.0"
     ts-invariant: "npm:^0.10.3"
     tslib: "npm:^2.3.0"
     zen-observable-ts: "npm:^1.2.5"
   peerDependencies:
-    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
+    graphql: ^15.0.0 || ^16.0.0
     graphql-ws: ^5.5.5
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -53,7 +55,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: a3f048eaeb8d87cc9ea4a05106d853b2423354de167e0a5f6a96f8d7e775242388d25ada053ecd8bfce5881aca7eb1221d0dda5a4aaacf605d712cf42965c5b9
+  checksum: eade02f6faffd8e0d2f582ad65d0712d5147f74d794588896acfff9eb51aab014996d93fbeb0c1c0171f7422b5d2785b24a6c5780f0153c4736aef5cbf530c52
   languageName: node
   linkType: hard
 
@@ -2481,6 +2483,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.23.9":
+  version: 7.24.4
+  resolution: "@babel/runtime@npm:7.24.4"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 8ec8ce2c145bc7e31dd39ab66df124f357f65c11489aefacb30f431bae913b9aaa66aa5efe5321ea2bf8878af3fcee338c87e7599519a952e3a6f83aa1b03308
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.8.4":
   version: 7.22.6
   resolution: "@babel/runtime@npm:7.22.6"
@@ -2683,18 +2694,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jahia/js-server-engine@npm:^1.0.5":
-  version: 1.1.0
-  resolution: "@jahia/js-server-engine@npm:1.1.0"
+"@jahia/js-server-core@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@jahia/js-server-core@npm:0.0.4"
   dependencies:
     "@apollo/client": "npm:^3.5.5"
     dayjs: "npm:^1.10.4"
     graphql: "npm:^16.0.1"
     handlebars: "npm:^4.7.7"
     handlebars-utils: "npm:^1.0.6"
+    i18next: "npm:^23.10.1"
     prop-types: "npm:^15.8.1"
     react: "npm:^18.2.0"
-  checksum: 5059b312b6379db195fb05a0979f7ded5c1d8b74d44a67541e7518aa1ec918b8a5c6861c81501dbff514d1341cf555d99e39af777af447145669645e671eb7cd
+    react-i18next: "npm:^14.1.0"
+  checksum: 9126564e73c8e1edc6824d0fa36a8dc768f2c96fdb775e8d949d3cf460c89494079ccd1e38dd5facad5933defa7679deefb8054d4e9dee74edcc80ab1a6e06ba
   languageName: node
   linkType: hard
 
@@ -5440,6 +5453,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"html-parse-stringify@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "html-parse-stringify@npm:3.0.1"
+  dependencies:
+    void-elements: "npm:3.1.0"
+  checksum: 8743b76cc50e46d1956c1ad879d18eb9613b0d2d81e24686d633f9f69bb26b84676f64a926973de793cca479997017a63219278476d617b6c42d68246d7c07fe
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^23.10.1":
+  version: 23.10.1
+  resolution: "i18next@npm:23.10.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.2"
+  checksum: e4cfb143bdb6fd343f68749a40cf562aa47f11c7af0243c0533868ae097912c3ddd6c384eb4116d1fced024a91279424abd8c2d1f694bbf304c42ebe3968ecca
+  languageName: node
+  linkType: hard
+
 "ignore@npm:^5.2.0, ignore@npm:^5.2.4":
   version: 5.2.4
   resolution: "ignore@npm:5.2.4"
@@ -6436,7 +6467,7 @@ __metadata:
     "@babel/preset-env": "npm:^7.23.2"
     "@babel/preset-react": "npm:^7.22.15"
     "@jahia/eslint-config": "npm:^2.1.2"
-    "@jahia/js-server-engine": "npm:^1.0.5"
+    "@jahia/js-server-core": "npm:^0.0.4"
     "@jahia/scripts": "npm:^1.3.3"
     eslint: "npm:^8.43.0"
     eslint-plugin-jest: "npm:latest"
@@ -6851,6 +6882,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-i18next@npm:^14.1.0":
+  version: 14.1.0
+  resolution: "react-i18next@npm:14.1.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.9"
+    html-parse-stringify: "npm:^3.0.1"
+  peerDependencies:
+    i18next: ">= 23.2.3"
+    react: ">= 16.8.0"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 47b050ff3d8e43e8b56ca6b57f67c3feaecdb629b47eeb3923b4f43312b89af3e9373e93ada72420ad3199fc340605929512134eefcb55844f0eaa6bc0785613
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -6973,6 +7022,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"regenerator-runtime@npm:^0.14.0":
+  version: 0.14.1
+  resolution: "regenerator-runtime@npm:0.14.1"
+  checksum: 5db3161abb311eef8c45bcf6565f4f378f785900ed3945acf740a9888c792f75b98ecb77f0775f3bf95502ff423529d23e94f41d80c8256e8fa05ed4b07cf471
+  languageName: node
+  linkType: hard
+
 "regenerator-transform@npm:^0.15.1":
   version: 0.15.1
   resolution: "regenerator-transform@npm:0.15.1"
@@ -7034,6 +7090,21 @@ __metadata:
   bin:
     regjsparser: bin/parser
   checksum: be7757ef76e1db10bf6996001d1021048b5fb12f5cb470a99b8cf7f3ff943f0f0e2291c0dcdbb418b458ddc4ac10e48680a822b69ef487a0284c8b6b77beddc3
+  languageName: node
+  linkType: hard
+
+"rehackt@npm:0.0.6":
+  version: 0.0.6
+  resolution: "rehackt@npm:0.0.6"
+  peerDependencies:
+    "@types/react": "*"
+    react: "*"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    react:
+      optional: true
+  checksum: 3897c93270836159406529e0fa983bf4a11c07d2efc5c8f6bdfd7f6821d3b84a30d911c3f3b9c689948739e6955c5835c8dd9d91579150bec5092f356c0d91df
   languageName: node
   linkType: hard
 
@@ -8152,6 +8223,13 @@ __metadata:
     spdx-correct: "npm:^3.0.0"
     spdx-expression-parse: "npm:^3.0.0"
   checksum: 86242519b2538bb8aeb12330edebb61b4eb37fd35ef65220ab0b03a26c0592c1c8a7300d32da3cde5abd08d18d95e8dabfad684b5116336f6de9e6f207eec224
+  languageName: node
+  linkType: hard
+
+"void-elements@npm:3.1.0":
+  version: 3.1.0
+  resolution: "void-elements@npm:3.1.0"
+  checksum: 0390f818107fa8fce55bb0a5c3f661056001c1d5a2a48c28d582d4d847347c2ab5b7f8272314cac58acf62345126b6b09bea623a185935f6b1c3bbce0dfd7f7f
   languageName: node
   linkType: hard
 
