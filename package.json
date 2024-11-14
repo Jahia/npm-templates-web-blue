@@ -45,7 +45,7 @@
     "webpack-shell-plugin-next": "^2.3.1"
   },
   "dependencies": {
-    "@jahia/js-server-core": "^0.0.7",
+    "@jahia/js-server-core": "^0.0.17",
     "handlebars": "^4.7.6"
   },
   "maven": {
