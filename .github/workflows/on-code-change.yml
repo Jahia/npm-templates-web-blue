@@ -19,20 +19,20 @@ jobs:
           auditci_level: critical
 
   build:
-    name: Build NPM Module
+    name: Build Javascript Module
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: jahia/jahia-modules-action/build-step-npm@v2
+      - uses: jahia/jahia-modules-action/build-step-javascript@v2
 
-  npm-publish:
-    name: Publish NPM Module to Maven repository
+  publish:
+    name: Publish Javacript Module to Maven repository
     needs: build
     runs-on: ubuntu-latest
     steps:           
         - uses: actions/checkout@v3
-        - name: Publish NPM package
-          uses: jahia/jahia-modules-action/publish-npm@v2
+        - name: Publish javacript module
+          uses: jahia/jahia-modules-action/publish-javascript@v2
           with:
             mvn_settings_filepath: .github/maven.settings.xml
             nexus_username: ${{ secrets.NEXUS_USERNAME }}
